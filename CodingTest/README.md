@@ -9,3 +9,12 @@
   ##### [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/loop/Omok.java)
   ---
 </details>
+
+
+<details>
+  <summary>Greedy</summary>
+  
+  ---
+  ##### [> SugarDelivery](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/SugarDelivery.java)
+  ---
+</details>
