@@ -21,8 +21,8 @@ public class SugarDelivery {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		int N = scanner.nextInt();
-		int bags = 0;
+		int N = scanner.nextInt();	// weight
+		int bags = 0;				// number of bags
 
 		while(true) {
 			if(N%5==0) {
@@ -39,3 +39,12 @@ public class SugarDelivery {
 		scanner.close();
 	}
 }
+
+// example
+/***********
+ * 18 -> 4
+ * 4 -> -1
+ * 6 -> 2
+ * 9 -> 3
+ * 11 -> 3
+ ***********/
