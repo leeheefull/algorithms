@@ -11,39 +11,39 @@ public class Merge {
 			System.out.print(arr[i] + " ");
 
 		System.out.println();
-		mergeSort(arr, 0, 5);
+		mergeSort(arr, 0, arr.length-1);
 
 		// before
 		for(int i=0; i < arr.length; i++)
 			System.out.print(arr[i] + " ");
 	}
 
-	public static void mergeSort(int[] arr, int low, int high){
+	public static void mergeSort(int[] arr, int left, int right){
 
-		if(low<high) {
-			int mid = (low+high)/2;
+		if(left<right) {
+			int mid = (left+right)/2;
 			
-			mergeSort(arr, low, mid);
-			mergeSort(arr, mid+1, high);
+			mergeSort(arr, left, mid);
+			mergeSort(arr, mid+1, right);
 			
-			merge(arr, low, mid, high);
+			merge(arr, left, mid, right);
 		}
 	}
 
-	public static void merge(int[] arr, int low, int mid, int high){
+	public static void merge(int[] arr, int left, int mid, int right){
 
 		int[] sorted = new int[arr.length];
-		int i = low;
+		int i = left;
 		int j = mid+1;
-		int k = low;
+		int k = left;
 		
-		while(k <= high) {
+		while(k <= right) {
 			if(mid < i)					sorted[k++] = arr[j++];
-			else if(high < j)			sorted[k++] = arr[i++];
+			else if(right < j)			sorted[k++] = arr[i++];
 			else if(arr[j] < arr[i])	sorted[k++] = arr[j++];
 			else						sorted[k++] = arr[i++];
 		}
-		for (k = low; k <= high; k++)
+		for (k = left; k <= right; k++)
 			arr[k] = sorted[k];
 	}
 }
