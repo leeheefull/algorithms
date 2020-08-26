@@ -18,5 +18,6 @@
   ##### [> SugarDelivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/SugarDelivery.java)
   ##### [> ATM (baekjoon 11399)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/ATM.java)
   ##### [> Coin0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
+  ##### [> MeetingRoomAllocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
   ---
 </details>
