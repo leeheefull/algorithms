@@ -8,6 +8,7 @@
   ---
   ##### [> SugarDelivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/SugarDelivery.java)
   ##### [> Rope (baekjoon 2217)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/Rope.java)
+  ##### [> LostParenthesis (baekjoon 1541)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/LostParenthesis.java)
   ---
 </details>
 
