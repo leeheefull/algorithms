@@ -1,41 +1,29 @@
 package sort;
 
 public class Bubble {
-
-	public static void main(String[] args) {
+	
+	private int[] arr;
+	private int size;
+	
+	public Bubble(int[] arr) {
 		
-		int arr[] = {30, 60, 40, 50, 20, 10};  
-
-		// after
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
-
-		System.out.println();
-		bubbleSort(arr);
-		
-		// before
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+		this.arr = arr;
+		this.size = arr.length;
 	}
 	
-	public static void bubbleSort(int[] arr) {
+	public void sort() {
 		
-		int n = arr.length;
+		int n = size;
 		for(int i=n-1; 0<i; i--)
 			for(int j=0; j<i; j++)
 				if(arr[j] > arr[j+1])    
-					swap(j, j+1, arr);
+					swap(j, j+1);
 	}
 	
-	public static void swap(int x, int y, int[] arr) {
+	private void swap(int x, int y) {
+		
 		int tmp = arr[x];
 		arr[x] = arr[y];
 		arr[y] = tmp;
 	}
 }
-
-// output
-/*****************
-30 60 40 50 20 10 
-10 20 30 40 50 60 
-******************/

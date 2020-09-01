@@ -251,40 +251,57 @@
   ---
   ## [Bubble](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/sort/Bubble.java)
   ```java
-  public class Bubble {
+  public class Test {
 
     public static void main(String[] args) {
 
-      int arr[] = {30, 60, 40, 50, 20, 10};  
+      int arr[] = {30, 60, 40, 50, 20, 10};
+      Bubble bubble = new Bubble(arr);
 
       // after
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
-
       System.out.println();
-      bubbleSort(arr);
+
+      bubble.sort();
 
       // before
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
     }
+  }
+  ```
+  
+  ```java
+  public class Bubble {
 
-    public static void bubbleSort(int[] arr) {
+    private int[] arr;
+    private int size;
 
-      int n = arr.length;
+    public Bubble(int[] arr) {
+
+      this.arr = arr;
+      this.size = arr.length;
+    }
+
+    public void sort() {
+
+      int n = size;
       for(int i=n-1; 0<i; i--)
         for(int j=0; j<i; j++)
           if(arr[j] > arr[j+1])    
-            swap(j, j+1, arr);
+            swap(j, j+1);
     }
 
-    public static void swap(int x, int y, int[] arr) {
+    private void swap(int x, int y) {
+
       int tmp = arr[x];
       arr[x] = arr[y];
       arr[y] = tmp;
     }
   }
   ```
+  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
@@ -299,44 +316,59 @@
   ---
   ## [Selection](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/sort/Selection.java)
   ```java
-  public class Selection {
+  public class Test {
 
     public static void main(String[] args) {
 
-      int arr[] = {30, 60, 40, 50, 20, 10};  
+      int arr[] = {30, 60, 40, 50, 20, 10};
+      Selection selection = new Selection(arr);
 
       // after
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
-
       System.out.println();
-      selectionSort(arr);
+
+      selection.sort();
 
       // before
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
     }
+  }
+  ```
+  
+  ```java
+  public class Selection {
+	
+    private int[] arr;
+    private int size;
 
-    public static void selectionSort(int[] arr) {
+    public Selection(int[] arr) {
+      this.arr = arr;
+      this.size = arr.length;
+    }
 
-      int n = arr.length;
+    public void sort() {
+
+      int n = size;
       for(int i=0; i<n-1; i++) {
         int min = i;
         for(int j=i+1; j<n; j++)
           if(arr[j] < arr[min])
             min = j;
-
-        swap(min, i, arr);
+        swap(min, i);
       }
     }
 
-    public static void swap(int x, int y, int[] arr) {
+    private void swap(int x, int y) {
+
       int tmp = arr[x];
       arr[x] = arr[y];
       arr[y] = tmp;
     }
   }
   ```
+  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
@@ -351,27 +383,42 @@
   ---
   ## [Insertion](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/sort/Insertion.java)
   ```java
-  public class Insertion {
+  public class Test {
 
     public static void main(String[] args) {
-
-      int arr[] = {30, 60, 40, 50, 20, 10};  
-
+		
+      int arr[] = {30, 60, 40, 50, 20, 10};
+		  Insertion insertion = new Insertion(arr);
+		
       // after
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
-
       System.out.println();
-      insertionSort(arr);
+
+      insertion.sort();
 
       // before
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
     }
+  }
+  ```
+  
+  ```java
+  public class Insertion {
+	
+    private int[] arr;
+    private int size;
 
-    public static void insertionSort(int[] arr) {
+    public Insertion(int[] arr) {
 
-      int n = arr.length;
+      this.arr = arr;
+      this.size = arr.length;
+    }
+
+    public void sort() {
+
+      int n = size;
       for(int i=1; i<n; i++) {
         int key = arr[i];
         int j = i-1;
@@ -384,6 +431,7 @@
     }
   }
   ```
+  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
@@ -398,37 +446,59 @@
   ---
   ## [Merge](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/sort/Merge.java)
   ```java
-  public class Merge {
+  public class Test {
 
     public static void main(String[] args) {
 
-      int arr[] = {30, 60, 40, 50, 20, 10};  
+      int arr[] = {30, 60, 40, 50, 20, 10};
+      Merge merge = new Merge(arr);
 
       // after
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
-
       System.out.println();
-      mergeSort(arr, 0, arr.length-1);
+
+      merge.sort();
 
       // before
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
     }
+  }
+  ```
+  
+  ```java
+  public class Merge {
 
-    public static void mergeSort(int[] arr, int left, int right){
+    private int[] arr;
+    private int left;
+    private int right;
+
+    public Merge(int[] arr) {
+
+      this.arr = arr;
+      this.left = 0;
+      this.right = arr.length-1;
+    }
+
+    public void sort() {
+
+      sort(left, right);
+    }
+
+    private void sort(int left, int right){
+
+      int mid = (left+right)/2;
 
       if(left<right) {
-        int mid = (left+right)/2;
+        sort(left, mid);
+        sort(mid+1, right);
 
-        mergeSort(arr, left, mid);
-        mergeSort(arr, mid+1, right);
-
-        merge(arr, left, mid, right);
+        merge(left, mid, right);
       }
     }
 
-    public static void merge(int[] arr, int left, int mid, int right){
+    private void merge(int left, int mid, int right){
 
       int[] sorted = new int[arr.length];
       int i = left;
@@ -446,6 +516,7 @@
     }
   }
   ```
+  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
@@ -460,54 +531,77 @@
   ---
   ## [Quick](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/sort/Quick.java)
   ```java
-  public class Quick {
+  public class Test {
 
     public static void main(String[] args) {
 
-      int arr[] = {30, 60, 40, 50, 20, 10};  
+      int arr[] = {30, 60, 40, 50, 20, 10};
+      Quick quick = new Quick(arr);
 
       // after
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
-
       System.out.println();
-      quickSort(arr, 0, arr.length-1);
+
+      quick.sort();
 
       // before
       for(int i=0; i < arr.length; i++)
         System.out.print(arr[i] + " ");
     }
+  }
+  ```
+  
+  ```java
+  public class Quick {
 
-    private static void quickSort(int[] arr, int left, int right) {
+    private int[] arr;
+    private int left;
+    private int right;
+
+    public Quick(int[] arr) {
+
+      this.arr = arr;
+      this.left = 0;
+      this.right = arr.length-1;
+    }
+
+    public void sort() {
+      sort(left, right);
+    }
+
+    private void sort(int left, int right) {
 
       if(left<right) {
-        int pivot = partition(arr, left, right);
+        int pivot = partition(left, right);
 
-        quickSort(arr, left, pivot-1);
-        quickSort(arr, pivot+1, right);
+        sort(left, pivot-1);
+        sort(pivot+1, right);
       }
     }
 
-    private static int partition(int[] arr, int left, int right) {
+    private int partition(int left, int right) {
 
       int pivot = arr[right];
       int i = left-1;
 
       for(int j=left; j<=right-1; j++)
         if(arr[j]<=pivot)
-          swap(++i, j, arr);
+          swap(++i, j);
 
-      swap(i+1, right, arr);
+      swap(i+1, right);
       return i+1;
     }
 
-    public static void swap(int x, int y, int[] arr) {
+    private void swap(int x, int y) {
+
       int tmp = arr[x];
       arr[x] = arr[y];
       arr[y] = tmp;
     }
   }
   ```
+  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 

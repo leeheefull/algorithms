@@ -2,35 +2,35 @@ package sort;
 
 public class Merge {
 
-	public static void main(String[] args) {
-
-		int arr[] = {30, 60, 40, 50, 20, 10};  
-
-		// after
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
-
-		System.out.println();
-		mergeSort(arr, 0, arr.length-1);
-
-		// before
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+	private int[] arr;
+	private int left;
+	private int right;
+	
+	public Merge(int[] arr) {
+		
+		this.arr = arr;
+		this.left = 0;
+		this.right = arr.length-1;
 	}
+	
+	public void sort() {
+		
+		sort(left, right);
+	}
+	
+	private void sort(int left, int right){
 
-	public static void mergeSort(int[] arr, int left, int right){
-
+		int mid = (left+right)/2;
+		
 		if(left<right) {
-			int mid = (left+right)/2;
+			sort(left, mid);
+			sort(mid+1, right);
 			
-			mergeSort(arr, left, mid);
-			mergeSort(arr, mid+1, right);
-			
-			merge(arr, left, mid, right);
+			merge(left, mid, right);
 		}
 	}
 
-	public static void merge(int[] arr, int left, int mid, int right){
+	private void merge(int left, int mid, int right){
 
 		int[] sorted = new int[arr.length];
 		int i = left;
@@ -47,9 +47,3 @@ public class Merge {
 			arr[k] = sorted[k];
 	}
 }
-
-//output
-/*****************
-30 60 40 50 20 10 
-10 20 30 40 50 60 
-******************/

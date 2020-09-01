@@ -1,26 +1,19 @@
 package sort;
 
 public class Insertion {
-
-	public static void main(String[] args) {
-		
-		int arr[] = {30, 60, 40, 50, 20, 10};  
-
-		// after
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
-
-		System.out.println();
-		insertionSort(arr);
-		
-		// before
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
-	}
 	
-	public static void insertionSort(int[] arr) {
+	private int[] arr;
+	private int size;
+	
+	public Insertion(int[] arr) {
 		
-		int n = arr.length;
+		this.arr = arr;
+		this.size = arr.length;
+	}
+
+	public void sort() {
+		
+		int n = size;
 		for(int i=1; i<n; i++) {
 			int key = arr[i];
 			int j = i-1;
@@ -32,9 +25,3 @@ public class Insertion {
 		}
 	}
 }
-
-// output
-/*****************
-30 60 40 50 20 10 
-10 20 30 40 50 60 
-******************/

@@ -2,54 +2,48 @@ package sort;
 
 public class Quick {
 
-	public static void main(String[] args) {
-	
-		int arr[] = {30, 60, 40, 50, 20, 10};  
+	private int[] arr;
+	private int left;
+	private int right;
 
-		// after
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+	public Quick(int[] arr) {
 
-		System.out.println();
-		quickSort(arr, 0, arr.length-1);
-
-		// before
-		for(int i=0; i < arr.length; i++)
-			System.out.print(arr[i] + " ");
+		this.arr = arr;
+		this.left = 0;
+		this.right = arr.length-1;
 	}
 
-	private static void quickSort(int[] arr, int left, int right) {
+	public void sort() {
+		sort(left, right);
+	}
+
+	private void sort(int left, int right) {
 
 		if(left<right) {
-			int pivot = partition(arr, left, right);
-			
-			quickSort(arr, left, pivot-1);
-			quickSort(arr, pivot+1, right);
+			int pivot = partition(left, right);
+
+			sort(left, pivot-1);
+			sort(pivot+1, right);
 		}
 	}
 
-	private static int partition(int[] arr, int left, int right) {
+	private int partition(int left, int right) {
 
 		int pivot = arr[right];
 		int i = left-1;
-		
+
 		for(int j=left; j<=right-1; j++)
 			if(arr[j]<=pivot)
-				swap(++i, j, arr);
-		
-		swap(i+1, right, arr);
+				swap(++i, j);
+
+		swap(i+1, right);
 		return i+1;
 	}
-	
-	public static void swap(int x, int y, int[] arr) {
+
+	private void swap(int x, int y) {
+
 		int tmp = arr[x];
 		arr[x] = arr[y];
 		arr[y] = tmp;
 	}
 }
-
-//output
-/*****************
-30 60 40 50 20 10 
-10 20 30 40 50 60 
-******************/
