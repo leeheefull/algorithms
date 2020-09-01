@@ -1,4 +1,4 @@
-package loop;
+package Repetition;
 
 import java.util.Scanner;
 

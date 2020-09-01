@@ -1,8 +1,249 @@
 # Algorithm Concept
 > Algorithm concept study using 'Java'
 
-## Sort
 
+## Linear Structure
+
+<details>
+  <summary>Stack</summary>
+  
+  ---
+  ## [Stack](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/linearStructure/Stack.java)
+  > First In Last Out / Last In First Out
+  ```java
+  public class Test {
+  
+    public static void main(String[] args) {
+
+      Stack stack = new Stack(5);
+
+      stack.peek();	// stack is empty
+      stack.print();
+
+      stack.push(1);	// input 1
+      stack.print();	// 1
+
+      stack.push(2);	// input 2
+      stack.print();	// 2 1
+
+      stack.push(3);	// input 3
+      stack.print();	// 3 2 1
+
+      stack.push(4);	// input 4
+      stack.print();	// 4 3 2 1
+
+      stack.push(5);	// input 5
+      stack.print();	// 5 4 3 2 1
+
+      stack.push(6);	// stack is full
+      stack.print();	// 5 4 3 2 1
+
+      stack.pop();	// take out 5
+      stack.print();	// 4 3 2 1
+
+      stack.pop();	// take out 4
+      stack.print();	// 3 2 1
+
+      stack.pop();	// take out 3
+      stack.print();	// 2 1
+
+      stack.pop();	// take out 2
+      stack.print();	// 1
+
+      stack.pop();	// take out 1
+      stack.print();	// 
+
+      stack.pop();	// stack is empty
+      stack.print();
+    }
+  }
+  ```
+  ```java
+  public class Stack {
+
+    private int top;
+    private int size;
+    private int[] stack;
+
+    public Stack(int size) {
+      this.top = -1;
+      this.size = size;
+      stack = new int[size];
+    }
+
+    public boolean isEmpty() {
+      return (top==-1);
+    }
+
+    public boolean isFull() {
+      return (size-1<=top);
+    }
+
+    public void push(int item) {
+      if(isFull())
+        System.out.println("stack is full");
+      else
+        stack[++top] = item;
+    }
+
+    public int pop() {
+      if(isEmpty()) {
+        System.out.println("stack is empty");
+        return 0;
+      }
+      else{
+        System.out.println("(pop) " + stack[top]);
+        return stack[top--];
+      }
+    }
+
+    public int peek() {
+      if(isEmpty()) {
+        System.out.println("stack is empty");
+        return 0;
+      }
+      else {
+        System.out.println("(peek) " + stack[top]);
+        return stack[top];
+      }
+    }
+
+    public void print() {
+      System.out.print(" <- (stack)");
+      for(int i=top; 0<=i; i--)
+        System.out.print(" " + stack[i] + " ");
+      System.out.println("(end)\n");
+    }
+  }
+  ```
+  ---
+</details>
+
+
+<details>
+  <summary>Queue</summary>
+  
+  ---
+  ## [Queue](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/linearStructure/Queue.java)
+  > First In First Out / Last In Last Out
+  ```java
+  public class Test {
+  
+    public static void main(String[] args) {
+    
+      Queue queue = new Queue(5);
+		
+      queue.dequeue();	// queue is empty
+      queue.print();
+
+      queue.enqueue(1);	// push: 1
+      queue.print();		// 1
+
+      queue.enqueue(2);	// push: 2
+      queue.print();		// 1 2
+
+      queue.enqueue(3);	// push: 3
+      queue.print();		// 1 2 3
+
+      queue.enqueue(4);	// push: 4
+      queue.print();		// 1 2 3 4
+
+      queue.enqueue(5);	// push: 5
+      queue.print();		// 1 2 3 4 5
+
+      queue.enqueue(6);	// queue is full
+      queue.print();		// 1 2 3 4 5
+
+      queue.peek();		// show: 5
+      queue.print();		// 1 2 3 4 5
+
+      queue.dequeue();	// take out: 1
+      queue.print();		// 2 3 4 5
+
+      queue.dequeue();	// take out: 2
+      queue.print();		// 3 4 5
+
+      queue.dequeue();	// take out: 3
+      queue.print();		// 4 5
+
+      queue.dequeue();	// take out: 4
+      queue.print();		// 5
+
+      queue.dequeue();	// take out: 5
+      queue.print();
+
+      queue.dequeue();	// queue is empty 
+      queue.print();
+    }
+  }
+  ```
+  ```java
+  public class Queue {
+
+    private int front;
+    private int rear;
+    private int size;
+    private Object[] queue;
+
+    public Queue(int size) {
+      this.front = 0;
+      this.rear = -1;
+      this.size = size;
+      this.queue = new Object[size];
+    }
+
+    public boolean isEmpty() {
+      return (front==rear+1);
+    }
+
+    public boolean isFull() {
+      return (rear==size-1);
+    }
+
+    public void enqueue(Object item) {
+      if(isFull())
+        System.out.println("queue is full");
+      else {
+        queue[++rear] = item;
+        System.out.println("enqueue: " + item);
+      }
+    }
+
+    public Object dequeue() {
+      if(isEmpty()) {
+        System.out.println("queue is empty");
+        return 0;
+      }
+      else {
+        System.out.println("dequeue: " + queue[front]);
+        return queue[front++];
+      }
+    }
+
+    public Object peek() {
+      if(isEmpty()) {
+        System.out.println("queue is empty");
+        return 0;
+      }
+      else {
+        System.out.println("peek: " + queue[front]);
+        return queue[front];
+      }
+    }
+
+    public void print() {
+      System.out.print("queue: ");
+          for(int i=front; i<=rear; i++)
+              System.out.print(queue[i] + " ");
+          System.out.println();
+    }
+  }
+  ```
+  ---
+</details>
+
+
+## Sort
 
 <details>
   <summary>Bubble</summary>

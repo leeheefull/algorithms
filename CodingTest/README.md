@@ -6,19 +6,19 @@
   <summary>Mathematics</summary>
   
   ---
-  ##### [> SugarDelivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/SugarDelivery.java)
-  ##### [> Rope (baekjoon 2217)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/Rope.java)
   ##### [> LostParenthesis (baekjoon 1541)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/LostParenthesis.java)
+  ##### [> Rope (baekjoon 2217)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/Rope.java)
+  ##### [> SugarDelivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/mathematics/SugarDelivery.java)
   ---
 </details>
 
 
 <details>
-  <summary>Loop</summary>
+  <summary>Repetition</summary>
   
   ---
-  ##### [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/loop/Pyramid.java)
-  ##### [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/loop/Omok.java)
+  ##### [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/Repetition/Pyramid.java)
+  ##### [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/Repetition/Omok.java)
   ---
 </details>
 
@@ -27,9 +27,9 @@
   <summary>Greedy</summary>
   
   ---
-  ##### [> ATM (baekjoon 11399)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/ATM.java)
-  ##### [> Coin0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
   ##### [> MeetingRoomAllocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
   ##### [> Exchange (baekjoon 5585)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Exchange.java)
+  ##### [> Coin0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
+  ##### [> ATM (baekjoon 11399)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/ATM.java)
   ---
 </details>
