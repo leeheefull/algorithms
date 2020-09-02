@@ -1,13 +1,13 @@
-package linearStructure;
+package queue;
 
-public class Queue {
+public class ArrayQueue {
 
 	private int front;
 	private int rear;
 	private int size;
 	private Object[] queue;
 	
-	public Queue(int size) {
+	public ArrayQueue(int size) {
 		this.front = 0;
 		this.rear = -1;
 		this.size = size;

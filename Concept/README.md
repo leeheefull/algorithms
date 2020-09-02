@@ -2,20 +2,20 @@
 > Algorithm concept study using 'Java'
 
 
-## Linear Structure
+## List
 
 <details>
-  <summary>Stack</summary>
+  <summary>ArrayStack</summary>
   
   ---
-  ## [Stack](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/linearStructure/Stack.java)
+  ## [ArrayStack](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/list/ArrayStack.java)
   > First In Last Out / Last In First Out
   ```java
-  public class Test {
+  public class ArrayStackTest {
   
     public static void main(String[] args) {
 
-      Stack stack = new Stack(5);
+      ArrayStack stack = new ArrayStack(5);
 
       stack.peek();	// stack is empty
       stack.print();
@@ -59,7 +59,7 @@
   }
   ```
   ```java
-  public class Stack {
+  public class ArrayStack {
 
     private int top;
     private int size;
@@ -116,69 +116,99 @@
     }
   }
   ```
+  ```
+  stack is empty
+  stack: 
+  push: 1
+  stack: 1 
+  push: 2
+  stack: 2 1 
+  push: 3
+  stack: 3 2 1 
+  push: 4
+  stack: 4 3 2 1 
+  push: 5
+  stack: 5 4 3 2 1 
+  stack is full
+  stack: 5 4 3 2 1 
+  pop: 5
+  stack: 4 3 2 1 
+  pop: 4
+  stack: 3 2 1 
+  pop: 3
+  stack: 2 1 
+  pop: 2
+  stack: 1 
+  pop: 1
+  stack: 
+  stack is empty
+  stack: 
+  ```
   ---
 </details>
 
 
+## Queue
+
 <details>
-  <summary>Queue</summary>
+  <summary>ArrayQueue</summary>
   
   ---
-  ## [Queue](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/linearStructure/Queue.java)
+  ## [ArrayQueue](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/queue/ArrayQueue.java)
   > First In First Out / Last In Last Out
   ```java
-  public class Test {
+  public class ArrayQueueTest {
   
     public static void main(String[] args) {
     
-      Queue queue = new Queue(5);
+      ArrayQueue queue = new ArrayQueue(5);
 		
-      queue.dequeue();	// queue is empty
+      queue.dequeue();  // queue is empty
       queue.print();
 
-      queue.enqueue(1);	// push: 1
-      queue.print();		// 1
+      queue.enqueue(1); // push: 1
+      queue.print();    // 1
 
-      queue.enqueue(2);	// push: 2
-      queue.print();		// 1 2
+      queue.enqueue(2); // push: 2
+      queue.print();    // 1 2
 
-      queue.enqueue(3);	// push: 3
-      queue.print();		// 1 2 3
+      queue.enqueue(3); // push: 3
+      queue.print();    // 1 2 3
 
-      queue.enqueue(4);	// push: 4
-      queue.print();		// 1 2 3 4
+      queue.enqueue(4); // push: 4
+      queue.print();    // 1 2 3 4
 
-      queue.enqueue(5);	// push: 5
-      queue.print();		// 1 2 3 4 5
+      queue.enqueue(5); // push: 5
+      queue.print();    // 1 2 3 4 5
 
-      queue.enqueue(6);	// queue is full
-      queue.print();		// 1 2 3 4 5
+      queue.enqueue(6); // queue is full
+      queue.print();    // 1 2 3 4 5
 
-      queue.peek();		// show: 5
-      queue.print();		// 1 2 3 4 5
+      queue.peek();     // show: 5
+      queue.print();    // 1 2 3 4 5
 
-      queue.dequeue();	// take out: 1
-      queue.print();		// 2 3 4 5
+      queue.dequeue();  // take out: 1
+      queue.print();    // 2 3 4 5
 
-      queue.dequeue();	// take out: 2
-      queue.print();		// 3 4 5
+      queue.dequeue();  // take out: 2
+      queue.print();    // 3 4 5
 
-      queue.dequeue();	// take out: 3
-      queue.print();		// 4 5
+      queue.dequeue();  // take out: 3
+      queue.print();    // 4 5
 
-      queue.dequeue();	// take out: 4
-      queue.print();		// 5
+      queue.dequeue();  // take out: 4
+      queue.print();    // 5
 
-      queue.dequeue();	// take out: 5
+      queue.dequeue();  // take out: 5
       queue.print();
 
-      queue.dequeue();	// queue is empty 
+      queue.dequeue();  // queue is empty 
       queue.print();
     }
   }
   ```
   ```java
-  public class Queue {
+  public class ArrayQueue {
 
     private int front;
     private int rear;
@@ -238,6 +268,36 @@
           System.out.println();
     }
   }
+  ```
+  ```
+  queue is empty
+  queue: 
+  enqueue: 1
+  queue: 1 
+  enqueue: 2
+  queue: 1 2 
+  enqueue: 3
+  queue: 1 2 3 
+  enqueue: 4
+  queue: 1 2 3 4 
+  enqueue: 5
+  queue: 1 2 3 4 5 
+  queue is full
+  queue: 1 2 3 4 5 
+  peek: 1
+  queue: 1 2 3 4 5 
+  dequeue: 1
+  queue: 2 3 4 5 
+  dequeue: 2
+  queue: 3 4 5 
+  dequeue: 3
+  queue: 4 5 
+  dequeue: 4
+  queue: 5 
+  dequeue: 5
+  queue: 
+  queue is empty
+  queue: 
   ```
   ---
 </details>

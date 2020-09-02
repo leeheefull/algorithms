@@ -1,12 +1,12 @@
-package linearStructure;
+package list;
 
-public class Stack {
+public class ArrayStack {
 
 	private int top;
 	private int size;
 	private Object[] stack;
 
-	public Stack(int size) {
+	public ArrayStack(int size) {
 		this.top = -1;
 		this.size = size;
 		stack = new Object[size];
