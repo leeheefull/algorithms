@@ -1,13 +1,12 @@
-package list;
+package array;
 
-public class ArrayStackTest {
+public class StackTest {
 
 	public static void main(String[] args) {
 
-		ArrayStack stack = new ArrayStack(5);
+		Stack stack = new Stack(5);
 
-		stack.peek();	// stack is empty
-		stack.print();
+		stack.peek();	// stack underflow
 
 		stack.push(1);	// input 1
 		stack.print();	// 1
@@ -24,8 +23,7 @@ public class ArrayStackTest {
 		stack.push(5);	// input 5
 		stack.print();	// 5 4 3 2 1
 
-		stack.push(6);	// stack is full
-		stack.print();	// 5 4 3 2 1
+		stack.push(6);	// stack overflow
 
 		stack.pop();	// take out 5
 		stack.print();	// 4 3 2 1
@@ -42,7 +40,6 @@ public class ArrayStackTest {
 		stack.pop();	// take out 1
 		stack.print();
 
-		stack.pop();	// stack is empty
-		stack.print();
+		stack.pop();	// stack underflow
 	}		
 }

@@ -1,13 +1,12 @@
-package queue;
+package array;
 
-public class ArrayQueueTest {
+public class QueueTest {
 
 	public static void main(String[] args) {
 
-		ArrayQueue queue = new ArrayQueue(5);
+		Queue queue = new Queue(5);
 
-		queue.dequeue();	// queue is empty
-		queue.print();
+		queue.dequeue();	// stack underflow
 
 		queue.enqueue(1);	// push: 1
 		queue.print();		// 1
@@ -24,8 +23,7 @@ public class ArrayQueueTest {
 		queue.enqueue(5);	// push: 5
 		queue.print();		// 1 2 3 4 5
 
-		queue.enqueue(6);	// queue is full
-		queue.print();		// 1 2 3 4 5
+		queue.enqueue(6);	// stack overflow
 
 		queue.peek();		// show: 5
 		queue.print();		// 1 2 3 4 5
@@ -45,7 +43,6 @@ public class ArrayQueueTest {
 		queue.dequeue();	// take out: 5
 		queue.print();
 
-		queue.dequeue();	// queue is empty 
-		queue.print();
+		queue.dequeue();	// stack underflow
 	}
 }

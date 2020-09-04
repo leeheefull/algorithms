@@ -2,73 +2,70 @@
 > Algorithm concept study using 'Java'
 
 
-## List
+## Array
 
 <details>
-  <summary>ArrayStack</summary>
+  <summary>Stack</summary>
   
   ---
-  ## [ArrayStack](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/list/ArrayStack.java)
+  ## [Stack](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/array/Stack.java)
   > First In Last Out / Last In First Out
   ```java
-  public class ArrayStackTest {
-  
+  public class StackTest {
+
     public static void main(String[] args) {
 
-      ArrayStack stack = new ArrayStack(5);
+      Stack stack = new Stack(5);
 
-      stack.peek();	// stack is empty
+      stack.peek(); // stack underflow
+
+      stack.push(1);  // input 1
+      stack.print();  // 1
+
+      stack.push(2);  // input 2
+      stack.print();  // 2 1
+
+      stack.push(3);  // input 3
+      stack.print();  // 3 2 1
+
+      stack.push(4);  // input 4
+      stack.print();  // 4 3 2 1
+
+      stack.push(5);  // input 5
+      stack.print();  // 5 4 3 2 1
+
+      stack.push(6);  // stack overflow
+      
+      stack.pop();  // take out 5
+      stack.print();  // 4 3 2 1
+
+      stack.pop();  // take out 4
+      stack.print();  // 3 2 1
+
+      stack.pop();  // take out 3
+      stack.print();  // 2 1
+
+      stack.pop();  // take out 2
+      stack.print();  // 1
+
+      stack.pop();  // take out 1
       stack.print();
 
-      stack.push(1);	// input 1
-      stack.print();	// 1
-
-      stack.push(2);	// input 2
-      stack.print();	// 2 1
-
-      stack.push(3);	// input 3
-      stack.print();	// 3 2 1
-
-      stack.push(4);	// input 4
-      stack.print();	// 4 3 2 1
-
-      stack.push(5);	// input 5
-      stack.print();	// 5 4 3 2 1
-
-      stack.push(6);	// stack is full
-      stack.print();	// 5 4 3 2 1
-
-      stack.pop();	// take out 5
-      stack.print();	// 4 3 2 1
-
-      stack.pop();	// take out 4
-      stack.print();	// 3 2 1
-
-      stack.pop();	// take out 3
-      stack.print();	// 2 1
-
-      stack.pop();	// take out 2
-      stack.print();	// 1
-
-      stack.pop();	// take out 1
-      stack.print();	// 
-
-      stack.pop();	// stack is empty
-      stack.print();
-    }
+      stack.pop();  // stack underflow
+    }		
   }
   ```
   ```java
-  public class ArrayStack {
+  public class Stack {
 
     private int top;
     private int size;
-    private int[] stack;
+    private Object[] stack;
 
     public Stack(int size) {
       this.top = -1;
       this.size = size;
-      stack = new int[size];
+      stack = new Object[size];
     }
 
     public boolean isEmpty() {
@@ -79,92 +76,71 @@
       return (size-1<=top);
     }
 
-    public void push(int item) {
+    public void push(Object item) {
       if(isFull())
-        System.out.println("stack is full");
+        System.out.println("stack overflow");
       else
         stack[++top] = item;
     }
 
-    public int pop() {
+    public Object pop() {
       if(isEmpty()) {
-        System.out.println("stack is empty");
+        System.out.println("stack underflow");
         return 0;
       }
-      else{
-        System.out.println("(pop) " + stack[top]);
+      else
         return stack[top--];
-      }
     }
 
-    public int peek() {
+    public Object peek() {
       if(isEmpty()) {
-        System.out.println("stack is empty");
+        System.out.println("stack underflow");
         return 0;
       }
-      else {
-        System.out.println("(peek) " + stack[top]);
+      else
         return stack[top];
-      }
     }
 
     public void print() {
-      System.out.print(" <- (stack)");
+      System.out.print("[ ");
       for(int i=top; 0<=i; i--)
-        System.out.print(" " + stack[i] + " ");
-      System.out.println("(end)\n");
+        System.out.print(stack[i] + " ");
+      System.out.println("]");
     }
   }
   ```
   ```
-  stack is empty
-  stack: 
-  push: 1
-  stack: 1 
-  push: 2
-  stack: 2 1 
-  push: 3
-  stack: 3 2 1 
-  push: 4
-  stack: 4 3 2 1 
-  push: 5
-  stack: 5 4 3 2 1 
-  stack is full
-  stack: 5 4 3 2 1 
-  pop: 5
-  stack: 4 3 2 1 
-  pop: 4
-  stack: 3 2 1 
-  pop: 3
-  stack: 2 1 
-  pop: 2
-  stack: 1 
-  pop: 1
-  stack: 
-  stack is empty
-  stack: 
+  stack underflow
+  [ 1 ]
+  [ 2 1 ]
+  [ 3 2 1 ]
+  [ 4 3 2 1 ]
+  [ 5 4 3 2 1 ]
+  stack overflow
+  [ 4 3 2 1 ]
+  [ 3 2 1 ]
+  [ 2 1 ]
+  [ 1 ]
+  [ ]
+  stack underflow
   ```
   ---
 </details>
 
-
-## Queue
-
 <details>
-  <summary>ArrayQueue</summary>
+  <summary>Queue</summary>
   
   ---
-  ## [ArrayQueue](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/queue/ArrayQueue.java)
+  ## [Queue](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/array/Queue.java)
   > First In First Out / Last In Last Out
   ```java
-  public class ArrayQueueTest {
-  
+  public class QueueTest {
+
     public static void main(String[] args) {
-    
-      ArrayQueue queue = new ArrayQueue(5);
-		
-      queue.dequeue();  // queue is empty
-      queue.print();
+
+      Queue queue = new Queue(5);
+
+      queue.dequeue();  // stack underflow
 
       queue.enqueue(1); // push: 1
       queue.print();    // 1
@@ -181,8 +157,7 @@
       queue.enqueue(5); // push: 5
       queue.print();    // 1 2 3 4 5
 
-      queue.enqueue(6); // queue is full
-      queue.print();    // 1 2 3 4 5
+      queue.enqueue(6); // stack overflow
 
       queue.peek();     // show: 5
       queue.print();    // 1 2 3 4 5
@@ -202,75 +177,68 @@
       queue.dequeue();  // take out: 5
       queue.print();
 
-      queue.dequeue();  // queue is empty 
-      queue.print();
+      queue.dequeue();  // stack underflow
     }
   }
   ```
   ```java
-  public class ArrayQueue {
+  public class Queue {
 
     private int front;
-    private int rear;
+    private int back;
     private int size;
     private Object[] queue;
 
     public Queue(int size) {
       this.front = 0;
-      this.rear = -1;
+      this.back = -1;
       this.size = size;
       this.queue = new Object[size];
     }
 
     public boolean isEmpty() {
-      return (front==rear+1);
+      return (front==back+1);
     }
 
     public boolean isFull() {
-      return (rear==size-1);
+      return (back==size-1);
     }
 
     public void enqueue(Object item) {
       if(isFull())
-        System.out.println("queue is full");
-      else {
-        queue[++rear] = item;
-        System.out.println("enqueue: " + item);
-      }
+        System.out.println("stack overflow");
+      else 
+        queue[++back] = item;
     }
 
     public Object dequeue() {
       if(isEmpty()) {
-        System.out.println("queue is empty");
+        System.out.println("stack underflow");
         return 0;
       }
-      else {
-        System.out.println("dequeue: " + queue[front]);
+      else
         return queue[front++];
-      }
     }
 
     public Object peek() {
       if(isEmpty()) {
-        System.out.println("queue is empty");
+        System.out.println("stack underflow");
         return 0;
       }
-      else {
-        System.out.println("peek: " + queue[front]);
+      else
         return queue[front];
-      }
     }
 
     public void print() {
-      System.out.print("queue: ");
-          for(int i=front; i<=rear; i++)
+      System.out.print("[ ");
+          for(int i=front; i<=back; i++)
               System.out.print(queue[i] + " ");
-          System.out.println();
+          System.out.println("]");
     }
   }
   ```
   ```
-  queue is empty
+  queue underflow
   queue: 
   enqueue: 1
   queue: 1 
@@ -282,7 +250,7 @@
   queue: 1 2 3 4 
   enqueue: 5
   queue: 1 2 3 4 5 
-  queue is full
+  queue overflow
   queue: 1 2 3 4 5 
   peek: 1
   queue: 1 2 3 4 5 
@@ -296,8 +264,85 @@
   queue: 5 
   dequeue: 5
   queue: 
-  queue is empty
+  queue underflow
   queue: 
+  ```
+  ---
+</details>
+
+
+## List
+
+<details>
+  <summary>ArrayList API</summary>
+  
+  ---
+  ## [ArrayList API](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/list/ArrayListAPI.java)
+  ```java
+  import java.util.ArrayList;
+  import java.util.Iterator;
+
+  public class ArrayListAPI {
+
+    public static void main(String[] args) {
+
+      ArrayList<Integer> numbers = new ArrayList<> ();
+
+      numbers.add(1);
+      System.out.println(numbers);
+
+      numbers.add(2);
+      System.out.println(numbers);
+
+      numbers.add(3);
+      System.out.println(numbers);
+
+      numbers.add(4);
+      System.out.println(numbers);
+
+      numbers.add(1, 5);
+      System.out.println(numbers);
+
+      numbers.remove(2);
+      System.out.println(numbers);
+
+      System.out.println("Index[2]: " + numbers.get(2));
+
+      System.out.println("Size: " + numbers.size());
+
+      // ---------------------------------------------------
+
+      Iterator<Integer> it = numbers.iterator();
+
+      while(it.hasNext()){
+        int value = (int) it.next();
+        System.out.print(value + " ");
+      }
+
+      System.out.println();
+
+      for(int value: numbers)
+        System.out.print(value + " ");
+
+      System.out.println();
+
+      for(int i=0; i<numbers.size(); i++)
+        System.out.print(numbers.get(i) + " ");
+    }
+  }
+  ```
+  ```
+  [1]
+  [1, 2]
+  [1, 2, 3]
+  [1, 2, 3, 4]
+  [1, 5, 2, 3, 4]
+  [1, 5, 3, 4]
+  Index[2]: 3
+  Size: 4
+  1 5 3 4 
+  1 5 3 4 
+  1 5 3 4 
   ```
   ---
 </details>
@@ -369,7 +414,6 @@
   ---
 </details>
 
-
 <details>
   <summary>Selection</summary>
   
@@ -436,7 +480,6 @@
   ---
 </details>
 
-
 <details>
   <summary>Insertion</summary>
   
@@ -463,7 +506,6 @@
     }
   }
   ```
-  
   ```java
   public class Insertion {
 	
@@ -491,14 +533,12 @@
     }
   }
   ```
-  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
   ```
   ---
 </details>
-
 
 <details>
   <summary>Merge</summary>
@@ -526,7 +566,6 @@
     }
   }
   ```
-  
   ```java
   public class Merge {
 
@@ -576,14 +615,12 @@
     }
   }
   ```
-  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 
   ```
   ---
 </details>
-
 
 <details>
   <summary>Quick</summary>
@@ -611,7 +648,6 @@
     }
   }
   ```
-  
   ```java
   public class Quick {
 
@@ -661,7 +697,6 @@
     }
   }
   ```
-  
   ```
   30 60 40 50 20 10 
   10 20 30 40 50 60 

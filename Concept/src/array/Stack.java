@@ -1,12 +1,12 @@
-package list;
+package array;
 
-public class ArrayStack {
+public class Stack {
 
 	private int top;
 	private int size;
 	private Object[] stack;
 
-	public ArrayStack(int size) {
+	public Stack(int size) {
 		this.top = -1;
 		this.size = size;
 		stack = new Object[size];
@@ -22,39 +22,33 @@ public class ArrayStack {
 
 	public void push(Object item) {
 		if(isFull())
-			System.out.println("stack is full");
-		else {
+			System.out.println("stack overflow");
+		else
 			stack[++top] = item;
-			System.out.println("push: " + item);
-		}
 	}
 
 	public Object pop() {
 		if(isEmpty()) {
-			System.out.println("stack is empty");
+			System.out.println("stack underflow");
 			return 0;
 		}
-		else{
-			System.out.println("pop: " + stack[top]);
+		else
 			return stack[top--];
-		}
 	}
 
 	public Object peek() {
 		if(isEmpty()) {
-			System.out.println("stack is empty");
+			System.out.println("stack underflow");
 			return 0;
 		}
-		else {
-			System.out.println("peek: " + stack[top]);
+		else
 			return stack[top];
-		}
 	}
 
 	public void print() {
-		System.out.print("stack: ");
+		System.out.print("[ ");
 		for(int i=top; 0<=i; i--)
 			System.out.print(stack[i] + " ");
-		System.out.println("");
+		System.out.println("]");
 	}
 }
