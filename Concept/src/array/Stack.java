@@ -45,10 +45,13 @@ public class Stack {
 			return stack[top];
 	}
 
-	public void print() {
-		System.out.print("[ ");
-		for(int i=top; 0<=i; i--)
-			System.out.print(stack[i] + " ");
-		System.out.println("]");
+	public String toString() {
+		String str = "[";
+		for(int i=top; 0<=i; i--) {
+			str += stack[i];
+			if(1<=i)
+				str += ", ";
+		}
+		return str + "]";
 	}
 }

@@ -47,10 +47,13 @@ public class Queue {
 			return queue[front];
 	}
 	
-	public void print() {
-		System.out.print("[ ");
-        for(int i=front; i<=back; i++)
-            System.out.print(queue[i] + " ");
-        System.out.println("]");
+	public String toString() {
+		String str = "[";
+        for(int i=front; i<=back; i++) {
+            str += queue[i];
+        	if(i<back)
+        		str += ", ";
+        }
+		return str + "]";
 	}
 }

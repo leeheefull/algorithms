@@ -20,39 +20,39 @@
       stack.peek(); // stack underflow
 
       stack.push(1);  // input 1
-      stack.print();  // 1
+      System.out.println(stack);  // 1
 
       stack.push(2);  // input 2
-      stack.print();  // 2 1
+      System.out.println(stack);  // 2 1
 
       stack.push(3);  // input 3
-      stack.print();  // 3 2 1
+      System.out.println(stack);  // 3 2 1
 
       stack.push(4);  // input 4
-      stack.print();  // 4 3 2 1
+      System.out.println(stack);  // 4 3 2 1
 
       stack.push(5);  // input 5
-      stack.print();  // 5 4 3 2 1
+      System.out.println(stack);  // 5 4 3 2 1
 
       stack.push(6);  // stack overflow
-      
+
       stack.pop();  // take out 5
-      stack.print();  // 4 3 2 1
+      System.out.println(stack);  // 4 3 2 1
 
       stack.pop();  // take out 4
-      stack.print();  // 3 2 1
+      System.out.println(stack);  // 3 2 1
 
       stack.pop();  // take out 3
-      stack.print();  // 2 1
+      System.out.println(stack);  // 2 1
 
       stack.pop();  // take out 2
-      stack.print();  // 1
+      System.out.println(stack);  // 1
 
       stack.pop();  // take out 1
-      stack.print();
+      System.out.println(stack);
 
       stack.pop();  // stack underflow
-    }		
+    }
   }
   ```
   ```java
@@ -63,20 +63,24 @@
     private Object[] stack;
 
     public Stack(int size) {
+    
       this.top = -1;
       this.size = size;
       stack = new Object[size];
     }
 
     public boolean isEmpty() {
+    
       return (top==-1);
     }
 
     public boolean isFull() {
+    
       return (size-1<=top);
     }
 
     public void push(Object item) {
+    
       if(isFull())
         System.out.println("stack overflow");
       else
@@ -84,6 +88,7 @@
     }
 
     public Object pop() {
+    
       if(isEmpty()) {
         System.out.println("stack underflow");
         return 0;
@@ -93,6 +98,7 @@
     }
 
     public Object peek() {
+    
       if(isEmpty()) {
         System.out.println("stack underflow");
         return 0;
@@ -101,27 +107,30 @@
         return stack[top];
     }
 
-    public void print() {
-      System.out.print("[ ");
-      for(int i=top; 0<=i; i--)
-        System.out.print(stack[i] + " ");
-      System.out.println("]");
+    public String toString() {
+      String str = "[";
+      for(int i=top; 0<=i; i--) {
+        str += stack[i];
+        if(1<=i)
+          str += ", ";
+      }
+      return str + "]";
     }
   }
   ```
   ```
   stack underflow
-  [ 1 ]
-  [ 2 1 ]
-  [ 3 2 1 ]
-  [ 4 3 2 1 ]
-  [ 5 4 3 2 1 ]
+  [1]
+  [2, 1]
+  [3, 2, 1]
+  [4, 3, 2, 1]
+  [5, 4, 3, 2, 1]
   stack overflow
-  [ 4 3 2 1 ]
-  [ 3 2 1 ]
-  [ 2 1 ]
-  [ 1 ]
-  [ ]
+  [4, 3, 2, 1]
+  [3, 2, 1]
+  [2, 1]
+  [1]
+  []
   stack underflow
   ```
   ---
@@ -143,39 +152,39 @@
       queue.dequeue();  // stack underflow
 
       queue.enqueue(1); // push: 1
-      queue.print();    // 1
+      System.out.println(queue);  // 1
 
       queue.enqueue(2); // push: 2
-      queue.print();    // 1 2
+      System.out.println(queue);  // 1 2
 
       queue.enqueue(3); // push: 3
-      queue.print();    // 1 2 3
+      System.out.println(queue);  // 1 2 3
 
       queue.enqueue(4); // push: 4
-      queue.print();    // 1 2 3 4
+      System.out.println(queue);  // 1 2 3 4
 
       queue.enqueue(5); // push: 5
-      queue.print();    // 1 2 3 4 5
+      System.out.println(queue);  // 1 2 3 4 5
 
       queue.enqueue(6); // stack overflow
 
-      queue.peek();     // show: 5
-      queue.print();    // 1 2 3 4 5
+      queue.peek(); // show: 5
+      System.out.println(queue);  // 1 2 3 4 5
 
       queue.dequeue();  // take out: 1
-      queue.print();    // 2 3 4 5
+      System.out.println(queue);  // 2 3 4 5
 
       queue.dequeue();  // take out: 2
-      queue.print();    // 3 4 5
+      System.out.println(queue);  // 3 4 5
 
       queue.dequeue();  // take out: 3
-      queue.print();    // 4 5
+      System.out.println(queue);  // 4 5
 
-      queue.dequeue();  // take out: 4
-      queue.print();    // 5
+      queue.dequeue();	// take out: 4
+      System.out.println(queue);		// 5
 
       queue.dequeue();  // take out: 5
-      queue.print();
+      System.out.println(queue);
 
       queue.dequeue();  // stack underflow
     }
@@ -229,43 +238,32 @@
         return queue[front];
     }
 
-    public void print() {
-      System.out.print("[ ");
-          for(int i=front; i<=back; i++)
-              System.out.print(queue[i] + " ");
-          System.out.println("]");
+    public String toString() {
+      String str = "[";
+          for(int i=front; i<=back; i++) {
+              str += queue[i];
+            if(i<back)
+              str += ", ";
+          }
+      return str + "]";
     }
   }
   ```
   ```
-  queue underflow
-  queue: 
-  enqueue: 1
-  queue: 1 
-  enqueue: 2
-  queue: 1 2 
-  enqueue: 3
-  queue: 1 2 3 
-  enqueue: 4
-  queue: 1 2 3 4 
-  enqueue: 5
-  queue: 1 2 3 4 5 
-  queue overflow
-  queue: 1 2 3 4 5 
-  peek: 1
-  queue: 1 2 3 4 5 
-  dequeue: 1
-  queue: 2 3 4 5 
-  dequeue: 2
-  queue: 3 4 5 
-  dequeue: 3
-  queue: 4 5 
-  dequeue: 4
-  queue: 5 
-  dequeue: 5
-  queue: 
-  queue underflow
-  queue: 
+  stack underflow
+  [1]
+  [1, 2]
+  [1, 2, 3]
+  [1, 2, 3, 4]
+  [1, 2, 3, 4, 5]
+  stack overflow
+  [1, 2, 3, 4, 5]
+  [2, 3, 4, 5]
+  [3, 4, 5]
+  [4, 5]
+  [5]
+  []
+  stack underflow
   ```
   ---
 </details>
