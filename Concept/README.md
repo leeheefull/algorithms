@@ -572,6 +572,308 @@
   ---
 </details>
 
+<details>
+  <summary>LinkedList</summary>
+  
+  ---
+  ## [LinkedList](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/list/LinkedList.java)
+  ```java
+  public class ArrayListTest {
+
+    public static void main(String[] args) {
+
+      ArrayList numbers = new ArrayList();
+
+      numbers.addLast(10);	// push 10
+      numbers.addLast(20);	// push 20
+      numbers.addLast(30);	// push 30
+      numbers.addLast(40);	// push 40
+      numbers.addLast(50);	// push 50
+      System.out.println(numbers);	// [10, 20, 30, 40, 50]
+
+      numbers.add(1, 15);		// add (index: 1 -> push: 15)
+      System.out.println(numbers);	// [10, 15, 20, 30, 40, 50]
+
+      numbers.addFirst(5);	// push first: 5
+      numbers.addLast(60);	// push last: 60
+      System.out.println(numbers);	// [5, 10, 15, 20, 30, 40, 50, 60]
+
+      System.out.println(numbers.remove(1));	// remove (index: 1 -> remove: 10)
+      System.out.println(numbers);	// [5, 15, 20, 30, 40, 50, 60]
+
+      numbers.removeFirst();	// remove first: 5
+      numbers.removeLast();	// remove first: 60
+      System.out.println(numbers);	// [15, 20, 30, 40, 50]
+
+      System.out.println(numbers.size());	// size: 5
+
+      System.out.println(numbers.indexOf(40));	// value: 40 -> index: 3
+
+      // very stupid iterator
+      System.out.print("[" + numbers.get(0) + ", ");
+      System.out.print(numbers.get(1) + ", ");
+      System.out.print(numbers.get(2) + ", ");
+      System.out.println(numbers.get(3) + "]");
+
+      // stupid iterator
+      System.out.print("[");
+      for(int i=0; i<numbers.size(); i++) {
+        System.out.print(numbers.get(i));
+        if(i<numbers.size()-1)
+          System.out.print(", ");
+      }
+      System.out.println("]");
+
+      // cool iterator
+      ArrayList.ListIterator li = numbers.listIterator();
+      System.out.print("[ ");
+      while(li.hasNext()) {
+        System.out.print(li.next() + " ");
+      }
+      System.out.println("]");
+
+      System.out.print("[ ");
+      while(li.hasPrevious())
+        System.out.print(li.previous() + " ");
+      System.out.println("]");
+
+      while(li.hasNext()) {
+        int number = (int)li.next();
+        if(number == 30) {
+          li.add(35);
+  //      li.remove();
+        }
+      }
+      System.out.println(numbers);
+    }
+  }
+  ```
+  ```java
+  public class LinkedList {
+
+    private Node head;
+    private Node tail;
+    private int size;
+
+    // ---------------------------------------
+    public class Node {
+
+      private Object data;
+      private Node next;
+
+      public Node() {
+        this.data = null;
+        this.next = null;
+      }
+
+      public Node(Object input) {
+        this.data = input;
+        this.next = null;
+      }
+
+      public String toString() {
+        return String.valueOf(this.data);
+      }
+    }
+    // ---------------------------------------
+
+    public LinkedList() {
+      this.size = 0;
+    }
+
+    // Add front of the list
+    public void addFirst(Object input) {
+      Node newNode = new Node(input);
+      newNode.next = head;
+      head = newNode;
+
+      size++;
+      if(head.next == null)
+        tail = head;
+    }
+
+    // Add behind of the list
+    public void addLast(Object input) {
+      Node newNode = new Node(input);
+      if(size == 0)
+        addFirst(input);
+      else {
+        tail.next = newNode;
+        tail = newNode;
+        size++;
+      }
+    }
+
+    // Find node by index
+    Node node(int index) {
+      Node x = head;
+      for(int i=0; i<index; i++)
+        x = x.next;
+      return x;
+    }
+
+    // Add data
+    public void add(int index, Object input) {
+      if(index == 0)
+        addFirst(input);
+      else {
+        Node tmp1 = node(index-1);
+        Node tmp2 = tmp1.next;
+
+        Node newNode = new Node(input);
+        tmp1.next = newNode;
+        newNode.next = tmp2;
+        size++;
+        if(newNode.next == null)
+          tail = newNode;
+      }
+    }
+
+    // Print linked list
+    public String toString() {
+      if(head == null)
+        return "[]";
+      Node tmp = head;
+      String str = "[";
+
+      while(tmp.next != null) {
+        str += tmp.data + " -> ";
+        tmp = tmp.next;
+      }
+      str += tmp.data;
+
+      return str + "]";
+    }
+
+    // Remove front of the list
+    public Object removeFirst() {
+      Node tmp = head;
+      head = head.next;
+      Object returnData = tmp.data;
+      tmp = null;
+      size--;
+      return returnData;
+    }
+
+    // Remove data
+    public Object remove(int index) {
+      if(index==0)
+        return removeFirst();
+
+      Node tmp = node(index-1);
+      Node toDoDeleted = tmp.next;
+
+      tmp.next = tmp.next.next;
+      Object returnData = toDoDeleted.data;
+
+      if(toDoDeleted == tail)
+        tail = tmp;
+
+      toDoDeleted = null;
+      size--;
+      return returnData;
+    }
+
+    // Remove behind of the list
+    public Object removeLast() {
+      return remove(size-1);
+    }
+
+    // get list size
+    public int size() {
+      return size;
+    }
+
+    // get data to the index
+    public Object get(int index) {
+      Node tmp = node(index);
+      return tmp.data;
+    }
+
+    // get index to the data
+    public int indexOf(Object data) {
+      Node tmp = head;
+      int index = 0;
+
+      while(tmp.data != data) {
+        tmp = tmp.next;
+        index++;
+        if(tmp == null)
+          return -1;
+      }
+      return index;
+    }
+
+    public ListIterator listIterator() {
+      return new ListIterator();
+    }
+
+    // -------------------------------------
+    public class ListIterator{
+
+      private Node next;
+      private Node lastReturned;
+      private int nextIndex;
+
+      public ListIterator() {
+        this.next = head;
+        this.nextIndex = 0;
+      }
+
+      public Object next() {
+        lastReturned = next;
+        next = next.next;
+        nextIndex++;
+
+        return lastReturned.data;
+      }
+
+      public boolean hasNext() {
+        return nextIndex<size();
+      }
+
+      public void add(Object input) {
+        Node newNode = new Node(input);
+
+        if(lastReturned == null) {
+          head = newNode;
+          newNode.next = next;
+        }
+        else {
+          lastReturned.next = newNode;
+          newNode.next = next;
+        }
+        lastReturned = newNode;
+        nextIndex++;
+        size++;	
+      }
+
+      public void remove() {
+        if(nextIndex == 0)
+          throw new IllegalStateException();
+        LinkedList.this.remove(nextIndex-1);
+        nextIndex--;
+      }
+    }
+    // -------------------------------------
+  }
+  ```
+  ```
+  [10 -> 20]
+  [10 -> 20 -> 30 -> 40]
+  [10 -> 15 -> 20 -> 25 -> 30 -> 40]
+  [15 -> 20 -> 25 -> 30 -> 40]
+  [15 -> 25 -> 30 -> 40]
+  [15 -> 25 -> 30]
+  3
+  25
+  2
+  [10 -> 15 -> 20 -> 25 -> 30]
+  [10 -> 15 -> 25 -> 30]
+  ```
+  ---
+</details>
+
 
 ## Sort
 
