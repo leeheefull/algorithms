@@ -5,6 +5,48 @@
 ## Array
 
 <details>
+  <summary>Stack API</summary>
+  
+  ---
+  ## [Stack API](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/array/StackAPI.java)
+  > First In Last Out / Last In First Out
+  ```java
+  public class StackAPI {
+
+    public static void main(String[] args) {
+
+      Stack<Integer> stack = new Stack<>();
+
+      stack.push(1);
+      stack.push(2);
+      stack.push(3);
+      System.out.println(stack.size()); // 3
+      System.out.println(stack);  // [1, 2, 3]
+
+      System.out.println(stack.pop());  // 3
+      System.out.println(stack.pop());  // 2
+      System.out.println(stack);  // [1]
+
+      System.out.println(stack.peek()); // 1
+      System.out.println(stack.peek()); // 1
+      System.out.println(stack);  // [1]
+    }
+  }
+  ```
+  ```
+  3
+  [1, 2, 3]
+  3
+  2
+  [1]
+  1
+  1
+  [1]
+  ```
+  ---
+</details>
+
+<details>
   <summary>Stack</summary>
   
   ---
