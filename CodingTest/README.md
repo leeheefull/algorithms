@@ -13,7 +13,6 @@
   ---
 </details>
 
-
 <details>
   <summary>Repetition</summary>
   
@@ -23,7 +22,6 @@
   ---
 </details>
 
-
 <details>
   <summary>Greedy</summary>
   
@@ -32,5 +30,13 @@
   ##### [> Exchange (baekjoon 5585)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Exchange.java)
   ##### [> Coin0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
   ##### [> ATM (baekjoon 11399)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/ATM.java)
+  ---
+</details>
+
+<details>
+  <summary>Dynamic Programming</summary>
+  
+  ---
+  ##### [> Make1 (baekjoon 1463)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Make1.java)
   ---
 </details>
