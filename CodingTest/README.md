@@ -27,6 +27,7 @@
   
   ---
   ##### [> MeetingRoomAllocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
+  ##### [> NewRecruit (baekjoon 1946)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/NewRecruit.java)
   ##### [> Exchange (baekjoon 5585)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Exchange.java)
   ##### [> Coin0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
   ##### [> ATM (baekjoon 11399)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/ATM.java)
