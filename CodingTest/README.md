@@ -26,6 +26,7 @@
   <summary>Greedy</summary>
   
   ---
+  ##### [> WordMath (baekjoon 1339)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/WordMath.java)
   ##### [> MeetingRoomAllocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
   ##### [> NewRecruit (baekjoon 1946)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/NewRecruit.java)
   ##### [> Exchange (baekjoon 5585)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Exchange.java)
