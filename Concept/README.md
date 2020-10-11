@@ -5,48 +5,6 @@
 ## Array
 
 <details>
-  <summary>Stack API</summary>
-  
-  ---
-  ## [Stack API](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/array/StackAPI.java)
-  > First In Last Out / Last In First Out
-  ```java
-  public class StackAPI {
-
-    public static void main(String[] args) {
-
-      Stack<Integer> stack = new Stack<>();
-
-      stack.push(1);
-      stack.push(2);
-      stack.push(3);
-      System.out.println(stack.size()); // 3
-      System.out.println(stack);  // [1, 2, 3]
-
-      System.out.println(stack.pop());  // 3
-      System.out.println(stack.pop());  // 2
-      System.out.println(stack);  // [1]
-
-      System.out.println(stack.peek()); // 1
-      System.out.println(stack.peek()); // 1
-      System.out.println(stack);  // [1]
-    }
-  }
-  ```
-  ```
-  3
-  [1, 2, 3]
-  3
-  2
-  [1]
-  1
-  1
-  [1]
-  ```
-  ---
-</details>
-
-<details>
   <summary>Stack</summary>
   
   ---
@@ -312,80 +270,6 @@
 
 
 ## List
-
-<details>
-  <summary>ArrayList API</summary>
-  
-  ---
-  ## [ArrayList API](https://github.com/leeheefull/Algorithms/tree/master/Concept/src/list/ArrayListAPI.java)
-  ```java
-  import java.util.ArrayList;
-  import java.util.Iterator;
-
-  public class ArrayListAPI {
-
-    public static void main(String[] args) {
-
-      ArrayList<Integer> numbers = new ArrayList<> ();
-
-      numbers.add(1);
-      System.out.println(numbers);
-
-      numbers.add(2);
-      System.out.println(numbers);
-
-      numbers.add(3);
-      System.out.println(numbers);
-
-      numbers.add(4);
-      System.out.println(numbers);
-
-      numbers.add(1, 5);
-      System.out.println(numbers);
-
-      numbers.remove(2);
-      System.out.println(numbers);
-
-      System.out.println("Index[2]: " + numbers.get(2));
-
-      System.out.println("Size: " + numbers.size());
-
-      // ---------------------------------------------------
-
-      Iterator<Integer> it = numbers.iterator();
-
-      while(it.hasNext()){
-        int value = (int) it.next();
-        System.out.print(value + " ");
-      }
-
-      System.out.println();
-
-      for(int value: numbers)
-        System.out.print(value + " ");
-
-      System.out.println();
-
-      for(int i=0; i<numbers.size(); i++)
-        System.out.print(numbers.get(i) + " ");
-    }
-  }
-  ```
-  ```
-  [1]
-  [1, 2]
-  [1, 2, 3]
-  [1, 2, 3, 4]
-  [1, 5, 2, 3, 4]
-  [1, 5, 3, 4]
-  Index[2]: 3
-  Size: 4
-  1 5 3 4 
-  1 5 3 4 
-  1 5 3 4 
-  ```
-  ---
-</details>
 
 <details>
   <summary>ArrayList</summary>
