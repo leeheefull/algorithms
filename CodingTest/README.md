@@ -27,6 +27,7 @@
   
   ---
   ##### [> Matrix (baekjoon 1080)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Matrix.java)
+  ##### [> Stand In Line (baekjoon 1138)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/StandInLine.java)
   ##### [> Word Math (baekjoon 1339)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/WordMath.java)
   ##### [> Meeting Room Allocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
   ##### [> New Recruit (baekjoon 1946)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/NewRecruit.java)
