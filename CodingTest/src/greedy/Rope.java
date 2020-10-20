@@ -14,7 +14,7 @@
  * 첫째 줄에 답을 출력한다.
  */
 
-package mathematics;
+package greedy;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -21,7 +21,7 @@
  * 만일 제시된 3개의 버튼으로 T초를 맞출 수 없으면 음수 -1을 첫 줄에 출력해야 한다. 
  */
 
-package mathematics;
+package greedy;
 
 import java.util.Scanner;
 
