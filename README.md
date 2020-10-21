@@ -8,7 +8,7 @@
 </details>
 
 <details>
-  <summary>Coding Test</summary>
+  <summary>Coding-Test</summary>
 
   ### [>> Jump to README.md <<](https://github.com/leeheefull/Algorithms/blob/master/CodingTest/README.md)
   ---
