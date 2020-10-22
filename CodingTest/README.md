@@ -54,5 +54,6 @@
   ---
   ##### [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/String/Omok.java)
   ##### [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/String/Pyramid.java)
+  ##### [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/String/RightAngleTriangle.java)
   ---
 </details>
