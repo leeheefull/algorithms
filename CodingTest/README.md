@@ -14,6 +14,7 @@
   ##### [> Meeting Room Allocation (baekjoon 1931)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MeetingRoomAllocation.java)
   ##### [> New Recruit (baekjoon 1946)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/NewRecruit.java)
   ##### [> Rope (baekjoon 2217)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Rope.java)
+  ##### [> Scales (baekjoon 2437)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Scales.java)
   ##### [> Exchange (baekjoon 5585)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Exchange.java)
   ##### [> Microwave Oven (baekjoon 10162)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/MicrowaveOven.java)
   ##### [> Coin 0 (baekjoon 11047)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Coin0.java)
