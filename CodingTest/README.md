@@ -73,6 +73,8 @@
   
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
   
+  [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
+  
   [> Sum Of Numbers (baekjoon 11720)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SumOfNumbers.java)
   
   ---
