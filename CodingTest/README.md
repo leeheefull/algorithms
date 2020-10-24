@@ -71,6 +71,8 @@
   
   [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Pyramid.java)
   
+  [> Number Of Words (baekjoon 1152)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfWords.java)
+  
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
   
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
