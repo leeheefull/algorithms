@@ -1,10 +1,10 @@
-package array;
+package queue;
 
-public class QueueTest {
+public class ArrayQueueTest {
 
 	public static void main(String[] args) {
 
-		Queue queue = new Queue(5);
+		ArrayQueue queue = new ArrayQueue(5);
 
 		queue.dequeue();	// stack underflow
 
