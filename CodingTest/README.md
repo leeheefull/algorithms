@@ -71,15 +71,17 @@
   
   [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Pyramid.java)
   
-  [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
-
   [> Number Of Words (baekjoon 1152)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfWords.java)
 
   [> Word Study (baekjoon 1157)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WordStudy.java)
 
+  [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
+
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
   
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
+  
+  [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
   
   [> Find Alphabet (baekjoon 10809)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FindAlphabet.java)
 
