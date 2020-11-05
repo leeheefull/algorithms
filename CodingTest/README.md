@@ -79,6 +79,8 @@
 
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
   
+  [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
+  
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
   
   [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
