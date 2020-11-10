@@ -42,6 +42,8 @@
   ---
   [> Fibonacci Function (baekjoon 1003)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/FibonacciFunction.java)
 
+  [> RGB Distance (baekjoon 1149)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/RGBDistance.java)
+
   [> Make 1 (baekjoon 1463)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Make1.java)
   
   [> Sugar Delivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/SugarDelivery.java)
