@@ -46,6 +46,8 @@
 
   [> Make 1 (baekjoon 1463)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Make1.java)
 
+  [> Integer Triangle (baekjoon 1932)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/IntegerTriangle.java)
+
   [> Climb Stair (baekjoon 2579)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ClimbStair.java)
   
   [> Sugar Delivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/SugarDelivery.java)
