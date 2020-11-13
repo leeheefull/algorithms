@@ -48,6 +48,8 @@
 
   [> Integer Triangle (baekjoon 1932)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/IntegerTriangle.java)
 
+  [> Pinary Number (baekjoon 2193)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/PinaryNumber.java)
+
   [> Climb Stair (baekjoon 2579)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ClimbStair.java)
   
   [> Sugar Delivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/SugarDelivery.java)
