@@ -51,6 +51,8 @@
   [> Pinary Number (baekjoon 2193)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/PinaryNumber.java)
 
   [> Climb Stair (baekjoon 2579)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ClimbStair.java)
+
+  [> FibonacciNumber2 (baekjoon 2748)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/FibonacciNumber2.java)
   
   [> Sugar Delivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/SugarDelivery.java)
 
