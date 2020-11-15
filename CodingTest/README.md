@@ -48,6 +48,8 @@
 
   [> Integer Triangle (baekjoon 1932)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/IntegerTriangle.java)
 
+  [> WineTasting (baekjoon 2156)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/WineTasting.java)
+
   [> Pinary Number (baekjoon 2193)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/PinaryNumber.java)
 
   [> Climb Stair (baekjoon 2579)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ClimbStair.java)
