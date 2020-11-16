@@ -46,6 +46,8 @@
 
   [> Make 1 (baekjoon 1463)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Make1.java)
 
+  [> ContinuousSum (baekjoon 1912)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ContinuousSum.java)
+
   [> Integer Triangle (baekjoon 1932)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/IntegerTriangle.java)
 
   [> WineTasting (baekjoon 2156)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/WineTasting.java)
