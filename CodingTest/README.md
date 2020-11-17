@@ -2,6 +2,41 @@
 > Algorithm problem practice using 'Java'
 
 <details>
+  <summary>String</summary>
+  
+  ---
+  [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Omok.java)
+  
+  [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Pyramid.java)
+  
+  [> Number Of Words (baekjoon 1152)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfWords.java)
+
+  [> Word Study (baekjoon 1157)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WordStudy.java)
+
+  [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
+
+  [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
+  
+  [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
+  
+  [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
+  
+  [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
+  
+  [> Find Alphabet (baekjoon 10809)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FindAlphabet.java)
+
+  [> A Plus B (6) (baekjoon 10953)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/APlusB6.java)
+
+  [> Same Input, output (2) (baekjoon 11719)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SameInOutput2.java)
+
+  [> Sum Of Numbers (baekjoon 11720)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SumOfNumbers.java)
+
+  [> Break 10 (baekjoon 11721)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Break10.java)
+
+  ---
+</details>
+
+<details>
   <summary>Greedy</summary>
   
   ---
@@ -46,7 +81,7 @@
 
   [> Make 1 (baekjoon 1463)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Make1.java)
 
-  [> ContinuousSum (baekjoon 1912)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ContinuousSum.java)
+  [> Continuous Sum (baekjoon 1912)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ContinuousSum.java)
 
   [> Integer Triangle (baekjoon 1932)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/IntegerTriangle.java)
 
@@ -56,65 +91,23 @@
 
   [> Climb Stair (baekjoon 2579)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/ClimbStair.java)
 
-  [> FibonacciNumber2 (baekjoon 2748)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/FibonacciNumber2.java)
+  [> Fibonacci Number (2) (baekjoon 2748)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/FibonacciNumber2.java)
   
   [> Sugar Delivery (baekjoon 2839)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/SugarDelivery.java)
 
   [> Add 123 (baekjoon 9095)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Add123.java)  
+
+  [> LIS (baekjoon 11053)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/LIS.java)  
 
   [> 2N Tiling (baekjoon 11726)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Tiling2N.java)  
   
   ---
 </details>
 
-<details>
-  <summary>Traversal</summary>
-  
-  ---
-  ---
-</details>
-
 
 <details>
-  <summary>Graph Theory</summary>
+  <summary>Graph</summary>
   
   ---
-  ---
-</details>
-
-
-<details>
-  <summary>String</summary>
-  
-  ---
-  [> Omok](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Omok.java)
-  
-  [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Pyramid.java)
-  
-  [> Number Of Words (baekjoon 1152)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfWords.java)
-
-  [> Word Study (baekjoon 1157)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WordStudy.java)
-
-  [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
-
-  [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
-  
-  [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
-  
-  [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
-  
-  [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
-  
-  [> Find Alphabet (baekjoon 10809)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FindAlphabet.java)
-
-  [> A Plus B (6) (baekjoon 10953)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/APlusB6.java)
-
-
-  [> Same Input, output 2 (baekjoon 11719)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SameInOutput2.java)
-
-  [> Sum Of Numbers (baekjoon 11720)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SumOfNumbers.java)
-
-  [> Break 10 (baekjoon 11721)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Break10.java)
-
   ---
 </details>
