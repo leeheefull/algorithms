@@ -97,6 +97,8 @@
 
   [> Add 123 (baekjoon 9095)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Add123.java)  
 
+  [> NumberOfEasyStep (baekjoon 10844)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/NumberOfEasyStep.java)  
+
   [> LIS (baekjoon 11053)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/LIS.java)  
 
   [> 2N Tiling (baekjoon 11726)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Tiling2N.java)  
