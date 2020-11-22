@@ -16,6 +16,8 @@
   [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
 
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
+
+  [> Measure Word Length (baekjoon 2743)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/MeasureWordLength.java)
   
   [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
   
@@ -97,7 +99,7 @@
 
   [> Add 123 (baekjoon 9095)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Add123.java)  
 
-  [> NumberOfEasyStep (baekjoon 10844)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/NumberOfEasyStep.java)  
+  [> Number Of Easy Step (baekjoon 10844)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/NumberOfEasyStep.java)  
 
   [> LIS (baekjoon 11053)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/LIS.java)  
 
