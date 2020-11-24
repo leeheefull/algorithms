@@ -104,6 +104,8 @@
   [> LIS (baekjoon 11053)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/LIS.java)  
 
   [> 2N Tiling (baekjoon 11726)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Tiling2N.java)  
+
+  [> 2N Tiling (2) (baekjoon 11727)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Tiling2N2.java)  
   
   ---
 </details>
