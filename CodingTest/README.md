@@ -47,6 +47,8 @@
   [> Stand In Line (baekjoon 1138)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/StandInLine.java)
   
   [> Word Math (baekjoon 1339)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/WordMath.java)
+
+  [> Repairman (baekjoon 1449)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/Repairman.java)
   
   [> Lost Parenthesis (baekjoon 1541)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/greedy/LostParenthesis.java)
   
