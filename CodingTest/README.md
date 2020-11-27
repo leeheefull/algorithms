@@ -27,6 +27,8 @@
   
   [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
   
+  [> NumberOfAlphabet (baekjoon 10808)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfAlphabet.java)
+
   [> Find Alphabet (baekjoon 10809)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FindAlphabet.java)
 
   [> A Plus B (6) (baekjoon 10953)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/APlusB6.java)
