@@ -26,6 +26,8 @@
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
   
   [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
+
+  [> Zero (baekjoon 10773)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Zero.java)
   
   [> NumberOfAlphabet (baekjoon 10808)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfAlphabet.java)
 
