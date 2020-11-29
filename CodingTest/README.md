@@ -9,6 +9,8 @@
   
   [> Pyramid](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Pyramid.java)
   
+  [> White Blank (baekjoon 1100)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WhiteBlank.java)
+
   [> Number Of Words (baekjoon 1152)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfWords.java)
 
   [> Word Study (baekjoon 1157)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WordStudy.java)
