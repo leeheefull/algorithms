@@ -23,6 +23,8 @@
 
   [> Measure Word Length (baekjoon 2743)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/MeasureWordLength.java)
   
+  [> Why KMP? (baekjoon 2902)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WhyKMP.java)
+
   [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
   
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
