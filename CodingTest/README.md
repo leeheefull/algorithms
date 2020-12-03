@@ -36,8 +36,10 @@
   [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
 
   [> Zero (baekjoon 10773)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Zero.java)
+
+  [> Read Vertical (baekjoon 10798)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/ReadVertical.java)
   
-  [> NumberOfAlphabet (baekjoon 10808)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfAlphabet.java)
+  [> Number Of Alphabet (baekjoon 10808)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfAlphabet.java)
 
   [> Find Alphabet (baekjoon 10809)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FindAlphabet.java)
 
