@@ -30,6 +30,8 @@
   [> Why KMP? (baekjoon 2902)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/WhyKMP.java)
 
   [> Croatia Alphabet (baekjoon 2941)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CroatiaAlphabet.java)
+
+  [> Balanced World (baekjoon 4949)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/BalancedWorld.java)
   
   [> OX Quiz (baekjoon 8958)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/OXQuiz.java)
   
