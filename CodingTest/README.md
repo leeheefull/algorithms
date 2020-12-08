@@ -19,6 +19,8 @@
 
   [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
 
+  [> Binary To Octal (baekjoon 1373)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/BinaryToOctal.java)
+
   [> Cannot Hear, See (baekjoon 1764)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CannotHearSee.java)
 
   [> Right Angle Triangle (baekjoon 2438)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/RightAngleTriangle.java)
