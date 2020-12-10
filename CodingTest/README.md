@@ -49,6 +49,8 @@
 
   [> A Plus B (6) (baekjoon 10953)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/APlusB6.java)
 
+  [> Number Of Vowels (baekjoon 10987)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/NumberOfVowels.java)
+
   [> Check Palindrome (baekjoon 10988)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CheckPalindrome.java)
 
   [> ROT13 (baekjoon 11655)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/ROT13.java)
