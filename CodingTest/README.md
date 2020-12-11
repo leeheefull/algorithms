@@ -53,6 +53,8 @@
 
   [> Check Palindrome (baekjoon 10988)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/CheckPalindrome.java)
 
+  [> Top Secret (baekjoon 11365)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/TopSecret.java)
+
   [> ROT13 (baekjoon 11655)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/ROT13.java)
 
   [> Suffix Array (baekjoon 11656)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/SuffixArray.java)
