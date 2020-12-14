@@ -47,14 +47,14 @@ public class StringExplosion {
 		StringBuilder ans = new StringBuilder();
 				
 		for (int i = 0; i < str.length; i++) {
-            ans.append(str[i]);
-            if (exp.length() <= ans.length()){
-                int index = ans.length() - exp.length();
-                if (ans.substring(index).equals(exp.toString())) {
-                    ans.delete(index, index + exp.length());
-                }
-            }
-        }
+		    ans.append(str[i]);
+		    if (exp.length() <= ans.length()){
+		        int index = ans.length() - exp.length();
+		        if (ans.substring(index).equals(exp.toString())) {
+		            ans.delete(index, index + exp.length());
+		        }
+		    }
+		}
 		
 		if(ans.length() == 0)
 			System.out.print("FRULA");
