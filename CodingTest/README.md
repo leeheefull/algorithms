@@ -19,6 +19,8 @@
 
   [> Basketball Game (baekjoon 1159)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/BasketballGame.java)
 
+  [> Palindrome Number (baekjoon 1259)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/PalindromeNumber.java)
+
   [> Group Word Checker (baekjoon 1316)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/GroupWordChecker.java)
 
   [> Binary To Octal (baekjoon 1373)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/BinaryToOctal.java)
@@ -43,7 +45,7 @@
   
   [> Parenthesis (baekjoon 9012)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/Parenthesis.java)
 
-  [> Filp Word (baekjoon 9093)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FilpWord.java)
+  [> Flip Word (baekjoon 9093)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/FlipWord.java)
 
   [> String Explosion (baekjoon 9935)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/string/StringExplosion.java)
 
