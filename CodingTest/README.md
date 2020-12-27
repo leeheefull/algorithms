@@ -147,6 +147,8 @@
 
   [> Number Of Easy Step (baekjoon 10844)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/NumberOfEasyStep.java)  
 
+  [> Fibonacci Number (5) (baekjoon 10870)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/FibonacciNumber5.java)  
+
   [> LIS (baekjoon 11053)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/LIS.java)  
 
   [> 2N Tiling (baekjoon 11726)](https://github.com/leeheefull/Algorithms/tree/master/CodingTest/src/dynamicProgramming/Tiling2N.java)  
