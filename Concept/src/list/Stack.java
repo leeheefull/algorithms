@@ -13,44 +13,46 @@ public class Stack {
 	}
 
 	public boolean isEmpty() {
-		return (top==-1);
+		return (top == -1);
 	}
 
 	public boolean isFull() {
-		return (size-1<=top);
+		return (size - 1 <= top);
 	}
 
 	public void push(Object item) {
-		if(isFull())
+		if (isFull()) {
 			System.out.println("stack overflow");
-		else
+		} else {
 			stack[++top] = item;
+		}
 	}
 
 	public Object pop() {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			System.out.println("stack underflow");
 			return 0;
-		}
-		else
+		} else {
 			return stack[top--];
+		}
 	}
 
 	public Object peek() {
-		if(isEmpty()) {
+		if (isEmpty()) {
 			System.out.println("stack underflow");
 			return 0;
-		}
-		else
+		} else {
 			return stack[top];
+		}
 	}
 
 	public String toString() {
 		String str = "[";
-		for(int i=top; 0<=i; i--) {
+		for (int i = top; 0 <= i; i--) {
 			str += stack[i];
-			if(1<=i)
+			if (1 <= i) {
 				str += ", ";
+			}
 		}
 		return str + "]";
 	}

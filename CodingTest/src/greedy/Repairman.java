@@ -38,19 +38,20 @@ public class Repairman {
 		int[] leak = new int[n];
 		int result = 0;
 		int tmp = 0;
-		
-		for(int i=0; i<n; i++)
+
+		for (int i = 0; i < n; i++) {
 			leak[i] = scan.nextInt();
+		}
 		Arrays.sort(leak);
-		
+
 		tmp = leak[0];
 		result++;
-		for(int v: leak)
-			if(tmp+l-1 < v) {
+		for (int v : leak) {
+			if (tmp + l - 1 < v) {
 				tmp = v;
 				result++;
 			}
-		
+		}
 		System.out.print(result);
 	}
 }

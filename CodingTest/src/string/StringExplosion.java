@@ -40,25 +40,25 @@ import java.io.InputStreamReader;
 public class StringExplosion {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		char[] str = br.readLine().toCharArray();
 		StringBuilder exp = new StringBuilder(br.readLine());
 		StringBuilder ans = new StringBuilder();
-				
+
 		for (int i = 0; i < str.length; i++) {
-		    ans.append(str[i]);
-		    if (exp.length() <= ans.length()){
-		        int index = ans.length() - exp.length();
-		        if (ans.substring(index).equals(exp.toString())) {
-		            ans.delete(index, index + exp.length());
-		        }
-		    }
+			ans.append(str[i]);
+			if (exp.length() <= ans.length()) {
+				int index = ans.length() - exp.length();
+				if (ans.substring(index).equals(exp.toString())) {
+					ans.delete(index, index + exp.length());
+				}
+			}
 		}
-		
-		if(ans.length() == 0)
+		if (ans.length() == 0) {
 			System.out.print("FRULA");
-		else
+		} else {
 			System.out.print(ans.toString());
+		}
 	}
 }

@@ -8,7 +8,6 @@ public class LinkedList {
 
 	// ---------------------------------------
 	public class Node {
-
 		private Object data;
 		private Node next;
 
@@ -39,16 +38,17 @@ public class LinkedList {
 		head = newNode;
 
 		size++;
-		if(head.next == null)
+		if (head.next == null) {
 			tail = head;
+		}
 	}
 
 	// Add behind of the list
 	public void addLast(Object input) {
 		Node newNode = new Node(input);
-		if(size == 0)
+		if (size == 0) {
 			addFirst(input);
-		else {
+		} else {
 			tail.next = newNode;
 			tail = newNode;
 			size++;
@@ -58,41 +58,43 @@ public class LinkedList {
 	// Find node by index
 	Node node(int index) {
 		Node x = head;
-		for(int i=0; i<index; i++)
+		for (int i = 0; i < index; i++) {
 			x = x.next;
+		}
 		return x;
 	}
 
 	// Add data
 	public void add(int index, Object input) {
-		if(index == 0)
+		if (index == 0) {
 			addFirst(input);
-		else {
-			Node tmp1 = node(index-1);
+		} else {
+			Node tmp1 = node(index - 1);
 			Node tmp2 = tmp1.next;
 
 			Node newNode = new Node(input);
 			tmp1.next = newNode;
 			newNode.next = tmp2;
 			size++;
-			if(newNode.next == null)
+			if (newNode.next == null) {
 				tail = newNode;
+			}
 		}
 	}
 
 	// Print linked list
 	public String toString() {
-		if(head == null)
+		if (head == null) {
 			return "[]";
+		}
 		Node tmp = head;
 		String str = "[";
 
-		while(tmp.next != null) {
+		while (tmp.next != null) {
 			str += tmp.data + " -> ";
 			tmp = tmp.next;
 		}
 		str += tmp.data;
-
 		return str + "]";
 	}
 
@@ -108,18 +110,18 @@ public class LinkedList {
 
 	// Remove data
 	public Object remove(int index) {
-		if(index==0)
+		if (index == 0) {
 			return removeFirst();
-
-		Node tmp = node(index-1);
+		}
+		Node tmp = node(index - 1);
 		Node toDoDeleted = tmp.next;
 
 		tmp.next = tmp.next.next;
 		Object returnData = toDoDeleted.data;
 
-		if(toDoDeleted == tail)
+		if (toDoDeleted == tail) {
 			tail = tmp;
-
+		}
 		toDoDeleted = null;
 		size--;
 		return returnData;
@@ -127,7 +129,7 @@ public class LinkedList {
 
 	// Remove behind of the list
 	public Object removeLast() {
-		return remove(size-1);
+		return remove(size - 1);
 	}
 
 	// get list size
@@ -146,11 +148,12 @@ public class LinkedList {
 		Node tmp = head;
 		int index = 0;
 
-		while(tmp.data != data) {
+		while (tmp.data != data) {
 			tmp = tmp.next;
 			index++;
-			if(tmp == null)
+			if (tmp == null) {
 				return -1;
+			}
 		}
 		return index;
 	}
@@ -160,7 +163,7 @@ public class LinkedList {
 	}
 
 	// -------------------------------------
-	public class ListIterator{
+	public class ListIterator {
 
 		private Node next;
 		private Node lastReturned;
@@ -180,29 +183,29 @@ public class LinkedList {
 		}
 
 		public boolean hasNext() {
-			return nextIndex<size();
+			return nextIndex < size();
 		}
 
 		public void add(Object input) {
 			Node newNode = new Node(input);
 
-			if(lastReturned == null) {
+			if (lastReturned == null) {
 				head = newNode;
 				newNode.next = next;
-			}
-			else {
+			} else {
 				lastReturned.next = newNode;
 				newNode.next = next;
 			}
 			lastReturned = newNode;
 			nextIndex++;
-			size++;	
+			size++;
 		}
 
 		public void remove() {
-			if(nextIndex == 0)
+			if (nextIndex == 0) {
 				throw new IllegalStateException();
-			LinkedList.this.remove(nextIndex-1);
+			}
+			LinkedList.this.remove(nextIndex - 1);
 			nextIndex--;
 		}
 	}

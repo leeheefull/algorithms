@@ -21,15 +21,14 @@ public class SugarDelivery {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		int N = scanner.nextInt();	// weight
-		int bags = 0;				// number of bags
+		int N = scanner.nextInt(); // weight
+		int bags = 0; // number of bags
 
-		while(true) {
-			if(N%5==0) {
-				System.out.print(N/5+bags);
+		while (true) {
+			if (N % 5 == 0) {
+				System.out.print(N / 5 + bags);
 				break;
-			}
-			else if(N<=0) {
+			} else if (N <= 0) {
 				System.out.print(-1);
 				break;
 			}
@@ -42,9 +41,5 @@ public class SugarDelivery {
 
 // example
 /***********
- * 18 -> 4
- * 4 -> -1
- * 6 -> 2
- * 9 -> 3
- * 11 -> 3
+ * 18 -> 4 4 -> -1 6 -> 2 9 -> 3 11 -> 3
  ***********/

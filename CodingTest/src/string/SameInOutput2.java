@@ -17,9 +17,10 @@ import java.util.Scanner;
 public class SameInOutput2 {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
-		while(scan.hasNextLine())
+		while (scan.hasNextLine()) {
 			System.out.println(scan.nextLine());
+		}
 	}
 }

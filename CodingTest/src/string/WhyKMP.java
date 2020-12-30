@@ -40,12 +40,13 @@ public class WhyKMP {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String input = br.readLine();
 		String output = "";
-		
+
 		output += input.charAt(0);
-		for(int i=1; i<input.length(); i++)
-			if(input.charAt(i) == '-')
-				output += input.charAt(i+1);
-		
+		for (int i = 1; i < input.length(); i++) {
+			if (input.charAt(i) == '-') {
+				output += input.charAt(i + 1);
+			}
+		}
 		System.out.print(output);
 	}
 }

@@ -30,24 +30,28 @@ import java.util.Scanner;
 public class Scales {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scanner = new Scanner(System.in);
 		int n = scanner.nextInt();
 		int[] weight = new int[n];
-		for(int i=0; i<n; i++)
+
+		for (int i = 0; i < n; i++) {
 			weight[i] = scanner.nextInt();
-		
+		}
+
 		Arrays.sort(weight);
 		System.out.print(min(weight));
 	}
 
 	private static int min(int[] weight) {
-		
+
 		int result = 0;
-		for(int i=0; i<weight.length; i++) {
-			if(result+1 < weight[i])	break;
+		for (int i = 0; i < weight.length; i++) {
+			if (result + 1 < weight[i]) {
+				break;
+			}
 			result += weight[i];
 		}
-		return result+1;
+		return result + 1;
 	}
 }

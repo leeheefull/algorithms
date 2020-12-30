@@ -39,28 +39,40 @@ public class TieNumber {
 		int N = scanner.nextInt();
 		int[] numbers = new int[N];
 		int start = 0;
-        int end = N-1;
+		int end = N - 1;
 		int result = 0;
-		
-		for(int i=0; i<N; i++)
+
+		for (int i = 0; i < N; i++) {
 			numbers[i] = scanner.nextInt();
+		}
 		Arrays.sort(numbers);
-		
-        for(; start<end; start+=2) {
-            if(numbers[start]<1 && numbers[start+1]<1)
-            	result += numbers[start] * numbers[start+1];
-           	else	break;
-        }
 
-        for(; 0<end; end-=2) {
-            if(1<numbers[end] && 1<numbers[end-1])
-            	result += numbers[end] * numbers[end-1];
-            else	break;
-        }
-
-        for(; start<=end; start++)
-        	result += numbers[start];
-
-        System.out.println(result);
+		for (; start < end; start += 2) {
+			if (numbers[start] < 1 && numbers[start + 1] < 1) {
+				result += numbers[start] * numbers[start + 1];
+			} else {
+				break;
+			}
+		}
+		for (; 0 < end; end -= 2) {
+			if (1 < numbers[end] && 1 < numbers[end - 1]) {
+				result += numbers[end] * numbers[end - 1];
+			} else {
+				break;
+			}
+		}
+		for (; start <= end; start++) {
+			result += numbers[start];
+		}
+		System.out.println(result);
 	}
 }
+
+/* example
+ * 4
+ * 2 1 1 0
+ * -> 4 2 1 3
+ * 8
+ * 3 2 1 4 6 0 7 5
+ * 6 3 2 1 4 8 5 7
+ */

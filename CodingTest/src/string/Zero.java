@@ -51,21 +51,20 @@ public class Zero {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Integer> stack = new Stack<Integer>();
-		
 		int n = Integer.parseInt(br.readLine());
 		int result = 0;
-		
-		for(int i=0; i<n; i++) {
+
+		for (int i = 0; i < n; i++) {
 			int tmp = Integer.parseInt(br.readLine());
-			if(tmp == 0 && !stack.empty())
+			if (tmp == 0 && !stack.empty()) {
 				stack.pop();
-			else
+			} else {
 				stack.push(tmp);
+			}
 		}
-		
-		while(!stack.empty())
+		while (!stack.empty()) {
 			result += stack.pop();
-		
+		}
 		System.out.print(result);
 	}
 }

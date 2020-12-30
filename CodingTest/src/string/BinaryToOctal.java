@@ -21,17 +21,18 @@ import java.io.InputStreamReader;
 public class BinaryToOctal {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder binary = new StringBuilder(br.readLine());
 		StringBuilder result = new StringBuilder();
-		
-		if(binary.length()%3 == 2)
+
+		if (binary.length() % 3 == 2) {
 			binary.insert(0, "0");
-		else if(binary.length()%3 == 1)
+		} else if (binary.length() % 3 == 1) {
 			binary.insert(0, "00");
-		
-		for(int i=0; i<binary.length(); i+=3) {
+		}
+
+		for (int i = 0; i < binary.length(); i += 3) {
 			int sum = 0;
 			sum += ((int) (binary.charAt(i) - 48)) * 4;
 			sum += ((int) (binary.charAt(i + 1) - 48)) * 2;

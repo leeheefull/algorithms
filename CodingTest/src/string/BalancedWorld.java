@@ -49,20 +49,19 @@ public class BalancedWorld {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Stack<Character> bracket = new Stack<Character>();
-		
-		while(true) {
+
+		while (true) {
 			bracket.clear();
 			String line = br.readLine();
-			if(line.equals("."))
+			if (line.equals(".")) {
 				break;
-			
-			for(int i=0; i<line.length(); i++) {
+			}
+			for (int i = 0; i < line.length(); i++) {
 				char tmp = line.charAt(i);
-				if(tmp == '(' || tmp == '[')
+				if (tmp == '(' || tmp == '[') {
 					bracket.push(tmp);
-				else if(tmp == ')' || tmp == ']') {
-					if (bracket.isEmpty()
-							|| (bracket.peek() == '(' && tmp == ']')
+				} else if (tmp == ')' || tmp == ']') {
+					if (bracket.isEmpty() || (bracket.peek() == '(' && tmp == ']')
 							|| (bracket.peek() == '[' && tmp == ')')) {
 						bracket.push(tmp);
 						break;
@@ -70,11 +69,11 @@ public class BalancedWorld {
 					bracket.pop();
 				}
 			}
-			
-			if(bracket.isEmpty())
+			if (bracket.isEmpty()) {
 				System.out.println("yes");
-			else
+			} else {
 				System.out.println("no");
+			}
 		}
 	}
 }

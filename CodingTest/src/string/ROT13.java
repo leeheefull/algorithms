@@ -30,22 +30,23 @@ import java.io.InputStreamReader;
 public class ROT13 {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String line = br.readLine();
-		
-		for(int i=0; i<line.length(); i++) {
+
+		for (int i = 0; i < line.length(); i++) {
 			char before = line.charAt(i);
-			if(!(('A'<=before && before<='Z') || ('a'<=before && before<='z')))
+			if (!(('A' <= before && before <= 'Z') || ('a' <= before && before <= 'z'))) {
 				System.out.print(before);
-			else {
-				char after = (char)(before+13);
-				if(('A'<=before && before<='Z') && ('A'<=after && after<='Z'))
+			} else {
+				char after = (char) (before + 13);
+				if (('A' <= before && before <= 'Z') && ('A' <= after && after <= 'Z')) {
 					System.out.print(after);
-				else if(('a'<=before && before<='z') && ('a'<=after && after<='z'))
+				} else if (('a' <= before && before <= 'z') && ('a' <= after && after <= 'z')) {
 					System.out.print(after);
-				else
-					System.out.print((char)(after-26));
+				} else {
+					System.out.print((char) (after - 26));
+				}
 			}
 		}
 	}

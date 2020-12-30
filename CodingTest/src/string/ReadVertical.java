@@ -61,19 +61,20 @@ public class ReadVertical {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		char[][] read = new char[5][15];
 
-		
-		for(int i=0; i<read.length; i++) {
+		for (int i = 0; i < read.length; i++) {
 			String tmp = br.readLine();
-			for(int j=0; j<tmp.length(); j++)
+			for (int j = 0; j < tmp.length(); j++) {
 				read[i][j] = tmp.charAt(j);
-		}
-		
-		for(int i=0; i<read[0].length; i++)
-			for(int j=0; j<read.length; j++) {
-				if(read[j][i] == '\0')
-					continue;
-				else
-					System.out.print(read[j][i]);
 			}
+		}
+		for (int i = 0; i < read[0].length; i++) {
+			for (int j = 0; j < read.length; j++) {
+				if (read[j][i] == '\0') {
+					continue;
+				} else {
+					System.out.print(read[j][i]);
+				}
+			}
+		}
 	}
 }

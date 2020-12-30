@@ -33,17 +33,18 @@ import java.util.StringTokenizer;
 public class FlipWord {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int n = Integer.parseInt(br.readLine());
-		
-		while(n --> 0) {
+
+		while (n-- > 0) {
 			StringTokenizer word = new StringTokenizer(br.readLine(), " ");
-			while(word.hasMoreTokens()) {
+			while (word.hasMoreTokens()) {
 				char[] filp = word.nextToken().toCharArray();
-				for(int i=filp.length-1; 0<=i; i--)
+				for (int i = filp.length - 1; 0 <= i; i--) {
 					bw.write(filp[i]);
+				}
 				bw.write(' ');
 			}
 			bw.write('\n');

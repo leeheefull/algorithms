@@ -33,16 +33,17 @@ import java.util.Arrays;
 public class SuffixArray {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String word = br.readLine();
 		String[] suffix = new String[word.length()];
-		
-		for(int i=0; i<suffix.length; i++)
-				suffix[i] = word.substring(i, word.length());
-		
+
+		for (int i = 0; i < suffix.length; i++) {
+			suffix[i] = word.substring(i, word.length());
+		}
 		Arrays.sort(suffix);
-		for(String item: suffix)
+		for (String item : suffix) {
 			System.out.println(item);
+		}
 	}
 }

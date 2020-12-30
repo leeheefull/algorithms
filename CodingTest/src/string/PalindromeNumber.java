@@ -34,32 +34,33 @@ import java.io.OutputStreamWriter;
 public class PalindromeNumber {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		
-		while(true) {
+
+		while (true) {
 			String n = br.readLine();
-			if(n.equals("0"))
+			if (n.equals("0")) {
 				break;
-			if(check(n))
+			}
+			if (check(n)) {
 				bw.write("yes\n");
-			else
+			} else {
 				bw.write("no\n");
-			
+			}
 		}
 		bw.flush();
 	}
-	
+
 	private static boolean check(String n) {
-		
 		char[] tmp = n.toCharArray();
 		int head = 0;
-		int tail = tmp.length-1;
-		
-		while(head<tail) {
-			if(tmp[head] != tmp[tail])
+		int tail = tmp.length - 1;
+
+		while (head < tail) {
+			if (tmp[head] != tmp[tail]) {
 				return false;
+			}
 			head++;
 			tail--;
 		}

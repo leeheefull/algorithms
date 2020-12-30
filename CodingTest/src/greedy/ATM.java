@@ -30,20 +30,20 @@ public class ATM {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		int n = scanner.nextInt();		// number of people
-		int[] p = new int[n];			// time per people
-		for(int i=0; i<n; i++)
+		int n = scanner.nextInt(); // number of people
+		int[] p = new int[n]; // time per people
+
+		for (int i = 0; i < n; i++) {
 			p[i] = scanner.nextInt();
-
-		Arrays.sort(p);					// sort
-		int[] wait = p;					// waiting time for each
-		int total = wait[0];
-		
-		for(int i=0; i<n-1; i++) {
-			wait[i+1] += p[i];
-			total += wait[i+1];
 		}
+		Arrays.sort(p); // sort
+		int[] wait = p; // waiting time for each
+		int total = wait[0];
 
+		for (int i = 0; i < n - 1; i++) {
+			wait[i + 1] += p[i];
+			total += wait[i + 1];
+		}
 		System.out.print(total);
 		scanner.close();
 	}
@@ -51,7 +51,5 @@ public class ATM {
 
 // example
 /************
- * 5
- * 3 1 4 3 2
- * -> 32
+ * 5 3 1 4 3 2 -> 32
  ************/

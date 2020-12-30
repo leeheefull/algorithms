@@ -32,12 +32,14 @@ public class WhiteBlank {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int result = 0;
-		
-		for(int i=0; i<8; i++) {
+
+		for (int i = 0; i < 8; i++) {
 			String tmp = br.readLine();
-			for(int j=0; j<8; j++)
-				if((i+j)%2 == 0 && tmp.charAt(j) == 'F')
+			for (int j = 0; j < 8; j++) {
+				if ((i + j) % 2 == 0 && tmp.charAt(j) == 'F') {
 					result++;
+				}
+			}
 		}
 		System.out.print(result);
 	}

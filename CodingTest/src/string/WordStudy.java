@@ -32,23 +32,23 @@ public class WordStudy {
 		Scanner scan = new Scanner(System.in);
 		String word = scan.next();
 		int[] alpa = new int[26];
-		int max = -1; 
+		int max = -1;
 		char result = '?';
 
-		for(int i=0; i<word.length(); i++) {
-			if('A'<=word.charAt(i) && word.charAt(i)<='Z')
-				alpa[word.charAt(i)-'A']++;
-			else
-				alpa[word.charAt(i)-'a']++;
-		}
-		
-		for(int i=0; i<alpa.length; i++) {
-			if(max < alpa[i]) {
-				max = alpa[i];
-				result = (char) (i+65);
+		for (int i = 0; i < word.length(); i++) {
+			if ('A' <= word.charAt(i) && word.charAt(i) <= 'Z') {
+				alpa[word.charAt(i) - 'A']++;
+			} else {
+				alpa[word.charAt(i) - 'a']++;
 			}
-			else if(alpa[i] == max)
+		}
+		for (int i = 0; i < alpa.length; i++) {
+			if (max < alpa[i]) {
+				max = alpa[i];
+				result = (char) (i + 65);
+			} else if (alpa[i] == max) {
 				result = '?';
+			}
 		}
 		System.out.print(result);
 	}

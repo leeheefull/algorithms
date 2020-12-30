@@ -19,20 +19,20 @@ public class Coin0 {
 	public static void main(String[] args) {
 
 		Scanner scanner = new Scanner(System.in);
-		
-		int N = scanner.nextInt();		// number of coins
-		int K = scanner.nextInt();		// sum
-		int[] A = new int[N];			// value of coin
-		for(int i=0; i<N; i++)
+		int N = scanner.nextInt(); // number of coins
+		int K = scanner.nextInt(); // sum
+		int[] A = new int[N]; // value of coin
+		for (int i = 0; i < N; i++) {
 			A[i] = scanner.nextInt();
+		}
 		int result = 0;
-		
-		for(int i=N-1; -1<i; i--)
-			if(A[i]<=K) {
-				result += K/A[i];
-				K = K%A[i];
+
+		for (int i = N - 1; -1 < i; i--) {
+			if (A[i] <= K) {
+				result += K / A[i];
+				K = K % A[i];
 			}
-		
+		}
 		System.out.print(result);
 		scanner.close();
 	}
@@ -40,16 +40,5 @@ public class Coin0 {
 
 // example
 /**********
- * 10 4200
- * 1
- * 5
- * 10
- * 50
- * 100
- * 500
- * 1000
- * 5000
- * 10000
- * 50000
- * -> 6
+ * 10 4200 1 5 10 50 100 500 1000 5000 10000 50000 -> 6
  **********/

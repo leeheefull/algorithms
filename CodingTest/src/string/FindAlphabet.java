@@ -21,11 +21,11 @@ import java.util.Scanner;
 public class FindAlphabet {
 
 	public static void main(String[] args) {
-		
+
 		Scanner scan = new Scanner(System.in);
 		String S = scan.next();
-		
-		for(char c='a'; c<='z'; c++) {
+
+		for (char c = 'a'; c <= 'z'; c++) {
 			System.out.print(S.indexOf(c) + " ");
 		}
 	}

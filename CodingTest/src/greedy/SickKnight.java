@@ -46,11 +46,16 @@ public class SickKnight {
 	}
 
 	private static int chess(int n, int m) {
-		if(n == 1)		return 1;
-		else if(n == 2)	return Math.min(4, (m+1)/2);
-		else {
-			if(m < 7)	return Math.min(4, m);
-			else		return m-2;
+		if (n == 1) {
+			return 1;
+		} else if (n == 2) {
+			return Math.min(4, (m + 1) / 2);
+		} else {
+			if (m < 7) {
+				return Math.min(4, m);
+			} else {
+				return m - 2;
+			}
 		}
 	}
 }

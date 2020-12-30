@@ -36,7 +36,7 @@ import java.io.InputStreamReader;
 public class Ah {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print(br.readLine().length() >= br.readLine().length() ? "go" : "no");
 	}
