@@ -8,16 +8,17 @@ import java.util.StringTokenizer;
 
 public class BOJ14502 {
 
-    public static class location {
-        int x, y;
+    public static class Location {
+        private final int x;
+        private final int y;
 
-        public location(int x, int y) {
+        public Location(int x, int y) {
             this.x = x;
             this.y = y;
         }
     }
 
-    private static final List<location> virusList = new ArrayList<>();
+    private static final List<Location> virusList = new ArrayList<>();
     private static final int[] dx = {1, -1, 0, 0};  // up, down
     private static final int[] dy = {0, 0, 1, -1};  // left, right
 
@@ -40,7 +41,7 @@ public class BOJ14502 {
             for (int j = 0; j < m; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
                 if (map[i][j] == 2) {
-                    virusList.add(new location(i, j));
+                    virusList.add(new Location(i, j));
                 }
             }
         }
@@ -52,7 +53,7 @@ public class BOJ14502 {
         if (depth == 3) {
             copyMap();
 
-            for (location location : virusList) {
+            for (Location location : virusList) {
                 spreadVirus(location.x, location.y);
             }
             result = Math.max(result, countSafeZone());
@@ -72,9 +73,7 @@ public class BOJ14502 {
 
     private static void copyMap() {
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                copyMap[i][j] = map[i][j];
-            }
+            if (m >= 0) System.arraycopy(map[i], 0, copyMap[i], 0, m);
         }
     }
 
