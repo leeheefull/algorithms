@@ -9,16 +9,6 @@ import java.util.StringTokenizer;
 
 public class BOJ2178 {
 
-    public static class Node {
-        private final int x;
-        private final int y;
-
-        public Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     private static final int[] dx = {-1, 0, 1, 0};
     private static final int[] dy = {0, -1, 0, 1};
 
@@ -67,5 +57,15 @@ public class BOJ2178 {
                 }
             }
         }
+    }
+}
+
+class Node {
+    public int x;
+    public int y;
+
+    public Node(int x, int y) {
+        this.x = x;
+        this.y = y;
     }
 }
