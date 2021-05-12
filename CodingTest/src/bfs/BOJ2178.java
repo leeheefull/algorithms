@@ -9,9 +9,6 @@ import java.util.StringTokenizer;
 
 public class BOJ2178 {
 
-    private static final int[] dx = {-1, 0, 1, 0};
-    private static final int[] dy = {0, -1, 0, 1};
-
     private static int n, m;
     private static int[][] map;
     private static boolean[][] visited;
@@ -38,6 +35,9 @@ public class BOJ2178 {
 
     private static void bfs() {
         Queue<Node> queue = new LinkedList<>();
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, -1, 0, 1};
+
         queue.add(new Node(0, 0));
         visited[0][0] = true;
 
@@ -60,12 +60,3 @@ public class BOJ2178 {
     }
 }
 
-class Node {
-    public int x;
-    public int y;
-
-    public Node(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}

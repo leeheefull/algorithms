@@ -7,27 +7,14 @@ import java.util.*;
 
 public class BOJ2667 {
 
-    private static final int[] dx = {-1, 0, 1, 0};
-    private static final int[] dy = {0, -1, 0, 1};
-    private static final List<Integer> result = new ArrayList<>();
-
     private static int n;
     private static int[][] map;
     private static boolean[][] visited;
 
-    private static class Node {
-        public int x;
-        public int y;
-
-        public Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        List<Integer> result = new ArrayList<>();
         n = Integer.parseInt(br.readLine());
         map = new int[n][n];
         visited = new boolean[n][n];
@@ -56,13 +43,15 @@ public class BOJ2667 {
 
     private static int bfs(Node node) {
         Queue<Node> queue = new LinkedList<>();
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, -1, 0, 1};
+
         queue.add(new Node(node.x, node.y));
         visited[node.x][node.y] = true;
         int cnt = 1;
 
         while (!queue.isEmpty()) {
             Node current = queue.poll();
-            System.out.println(current.x + " " + current.y);
             for (int i = 0; i < 4; i++) {
                 int nextX = current.x + dx[i];
                 int nextY = current.y + dy[i];
