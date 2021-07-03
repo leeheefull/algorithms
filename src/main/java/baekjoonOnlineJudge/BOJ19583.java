@@ -9,7 +9,6 @@ public class BOJ19583 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        Set<String> nameSet = new HashSet<>();
         Set<String> startSet = new HashSet<>();
         Set<String> endSet = new HashSet<>();
 
@@ -24,7 +23,6 @@ public class BOJ19583 {
             int time = Integer.parseInt(st.nextToken().replace(":", ""));
             String name = st.nextToken();
 
-            nameSet.add(name);
             if (time <= S) {
                 startSet.add(name);
             }
@@ -33,8 +31,8 @@ public class BOJ19583 {
             }
         }
 
-        for (String name : nameSet) {
-            if (startSet.contains(name) && endSet.contains(name)) {
+        for (String name : startSet) {
+            if (endSet.contains(name)) {
                 answer++;
             }
         }
