@@ -1,10 +1,8 @@
 package algorithmMethod;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BfsTest {
@@ -28,10 +26,11 @@ class BfsTest {
                 {0, 1, 1, 1, 0, 0, 0},
                 {0, 1, 1, 1, 0, 0, 0}
         };
-        boolean[][] visited = new boolean[map.length][map[0].length];
+        int x = 0;
+        int y = 1;
 
         // when
-        int actual = bfs.bfs(map, visited, 0, 1);
+        int actual = bfs.getMoveCnt(map, x, y);
         int expected = 7;
 
         // then
@@ -39,7 +38,7 @@ class BfsTest {
     }
 
     @Test
-void 가장_빠르게_미로찾기() {
+    void 가장_빠르게_미로찾기() {
         // given
         int[][] map = {
                 {1, 0, 1, 0, 1, 0},
@@ -48,9 +47,13 @@ void 가장_빠르게_미로찾기() {
                 {1, 1, 1, 1, 1, 1},
                 {1, 1, 1, 1, 1, 1}
         };
+        int x1 = 0;
+        int y1 = 0;
+        int x2 = 4;
+        int y2 = 5;
 
         // when
-        int actual = bfs.bfs(map);
+        int actual = bfs.getMoveCntByShortPath(map, x1, y1, x2, y2);
         int expected = 10;
 
         // then
