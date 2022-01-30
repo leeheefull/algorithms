@@ -27,11 +27,11 @@ public class Combination {
             }
             answer.add(
                     oneCase.stream()
-                            .mapToInt(i -> i)
+                            .mapToInt(Integer::intValue)
                             .toArray()
             );
-            return;
-        } else {
+        }
+        if (r != 0) {
             for (int i = start; i < arr.length; i++) {
                 visited[i] = true;
                 getCombination(arr, visited, i + 1, r - 1);
