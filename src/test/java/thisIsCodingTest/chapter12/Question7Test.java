@@ -3,7 +3,6 @@ package thisIsCodingTest.chapter12;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import thisIsCodingTest.chapter11.Question6;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
