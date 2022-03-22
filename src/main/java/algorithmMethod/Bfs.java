@@ -4,16 +4,24 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Bfs {
+    private final int[][] map;
+
+    /**
+     * 0은 벽이고, 1은 길
+     */
+    public Bfs(int[][] map) {
+        this.map = map;
+    }
+
     /**
      * map에서 원하는 위치를 기준으로 방문했던 곳을 제외하고,
      * bfs 탐색을 실시하여 탐색한 곳의 개수를 구할 수 있다.
      *
-     * @param map 0과 1로 구성된 2차원 배열 (1만 이동할 수 있음)
-     * @param x   위치 값으로써 행을 결정하는 인자
-     * @param y   위치 값으로써 열을 결정하는 인자
+     * @param x 위치 값으로써 행을 결정하는 인자
+     * @param y 위치 값으로써 열을 결정하는 인자
      * @return map의 (x, y)를 시작으로 이동할 수 있는 곳의 개수
      */
-    public int getMoveCnt(int[][] map, int x, int y) {
+    public int getMoveCnt(int x, int y) {
         if (map[x][y] == 0) {
             return 0;
         }
@@ -58,14 +66,13 @@ public class Bfs {
     /**
      * (0, 0)을 시작으로 map의 마지막 index까지 가장 짧게 이동한 횟수를 구할 수 있다.
      *
-     * @param map 미로찾기 지도 (1인 곳이 길)
-     * @param x1  출발 지점의 행
-     * @param y1  출발 지접의 열
-     * @param x2  도착 지점의 행
-     * @param y2  도착 지점의 열
+     * @param x1 출발 지점의 행
+     * @param y1 출발 지접의 열
+     * @param x2 도착 지점의 행
+     * @param y2 도착 지점의 열
      * @return 출발 지점부터 도착 지점까지의 최소 이동 회수
      */
-    public int getMoveCntByShortPath(int[][] map, int x1, int y1, int x2, int y2) {
+    public int getMoveCntByShortPath(int x1, int y1, int x2, int y2) {
         if (x1 == x2 && y1 == y2) {
             return 1;
         }
