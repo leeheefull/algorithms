@@ -3,51 +3,65 @@ package algorithmMethod;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 조합 : 배열 중 r개를 뽑는 경우의 수 (순서는 중요하지 않음)
+ */
 public class Combination {
-    /**
-     * getCombination의 결과 값
-     */
-    public static final List<int[]> answer = new ArrayList<>();
+    private final List<int[]> picks = new ArrayList<>();
+    private final int[] arr;
+    private final int r;
+
+    public Combination(int[] arr, int r) {
+        this.arr = arr;
+        this.r = r;
+    }
 
     /**
-     * arr에서 r개를 뽑을 경우의 수 목록을 구할 수 있다.
-     *
-     * @param arr     뽑기를 할 정보
-     * @param visited 방문했는지 체크
-     * @param start   시작 index로써 처음에는 0을 넣는다.
-     * @param r       뽑을 개수
+     * 조합의 경우의 수 리스트 반환
      */
-    public void getCombination(int[] arr, boolean[] visited, int start, int r) {
+    public List<int[]> getCombination() {
+        execute(new boolean[arr.length], 0, r);
+//        print();
+        return picks;
+    }
+
+    private void execute(boolean[] visited, int depth, int r) {
         if (r == 0) {
-            List<Integer> oneCase = new ArrayList<>();
+            List<Integer> tmp = new ArrayList<>();
             for (int i = 0; i < arr.length; i++) {
                 if (visited[i]) {
-                    oneCase.add(arr[i]);
+                    tmp.add(arr[i]);
                 }
             }
-            answer.add(
-                    oneCase.stream()
-                            .mapToInt(Integer::intValue)
-                            .toArray()
-            );
+            int[] pick = new int[tmp.size()];
+            for (int i = 0; i < pick.length; i++) {
+                pick[i] = tmp.get(i);
+            }
+            picks.add(pick);
         }
         if (r != 0) {
-            for (int i = start; i < arr.length; i++) {
+            for (int i = depth; i < arr.length; i++) {
                 visited[i] = true;
-                getCombination(arr, visited, i + 1, r - 1);
+                execute(visited, i + 1, r - 1);
                 visited[i] = false;
             }
         }
     }
 
+    private void print() {
+        picks.forEach(pick -> {
+            for (int n : pick) {
+                System.out.print(n + " ");
+            }
+            System.out.println();
+        });
+    }
+
     /**
-     * n개 중 r개를 뽑을 경우의 수
-     *
-     * @param n 전체 개수
-     * @param r 뽑을 개수
-     * @return 경우의 수
+     * 순열 경우의 수 반환 (nCr)
+     * ex) 5C2 = (5 * 4) / (2 * 1) = 10
      */
-    public int getCount(int n, int r) {
+    public static int getCount(int n, int r) {
         if (n == r || r == 0) {
             return 1;
         } else {
