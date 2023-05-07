@@ -25,4 +25,19 @@ class ValidParentheses {
         }
         return true
     }
+
+    fun isValidSimple(s: String): Boolean {
+        if (s.isEmpty()) {
+            return true
+        }
+
+        val simplify = s.replace("()", "")
+            .replace("{}", "")
+            .replace("[]", "")
+
+        if (simplify == s) {
+            return false
+        }
+        return isValidSimple(simplify)
+    }
 }
